@@ -1,0 +1,14 @@
+{
+  "$id": "http://localhost:3000/schemas/connect-mediator.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "did": {
+      "type": "string",
+      "minLength": 10
+    }
+  },
+  "required": [
+    "did"
+  ]
+}

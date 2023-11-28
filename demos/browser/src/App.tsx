@@ -1,16 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import "./App.css";
+import React, {useCallback, useEffect, useMemo, useState} from "react";
 import * as jose from "jose";
-import { useAtom } from "jotai";
+import {useAtom} from "jotai";
 import * as SDK from "@input-output-hk/atala-prism-wallet-sdk";
-import { mnemonicsAtom } from "./state";
-import { trimString } from "./utils";
+import {mnemonicsAtom} from "./state";
+import {trimString} from "./utils";
 import Spacer from "./Spacer";
-import { Box } from "./Box";
-import { PlutoInMemory } from "../../pluto/PlutoInMemory";
+import {Box} from "./Box";
+import {PlutoInMemory} from "../../pluto/PlutoInMemory";
 
 const BasicMessage = SDK.BasicMessage;
 const ListenerKey = SDK.ListenerKey;
@@ -20,13 +19,13 @@ const RequestPresentation = SDK.RequestPresentation;
 
 const apollo = new SDK.Apollo();
 const castor = new SDK.Castor(apollo);
-const defaultMediatorDID = "did:peer:2.Ez6LSghwSE437wnDE1pt3X6hVDUQzSjsHzinpX3XFvMjRAm7y.Vz6Mkhh1e5CEYYq6JBUcTZ6Cp2ranCWRrv7Yax3Le4N59R6dd.SeyJ0IjoiZG0iLCJzIjoiaHR0cHM6Ly9zaXQtcHJpc20tbWVkaWF0b3IuYXRhbGFwcmlzbS5pbyIsInIiOltdLCJhIjpbImRpZGNvbW0vdjIiXX0";
+const defaultMediatorDID = "did:peer:2.Ez6LSghwSE437wnDE1pt3X6hVDUQzSjsHzinpX3XFvMjRAm7y.Vz6Mkhh1e5CEYYq6JBUcTZ6Cp2ranCWRrv7Yax3Le4N59R6dd.SeyJ0IjoiZG0iLCJzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwiciI6W10sImEiOlsiZGlkY29tbS92MiJdfQ";
 const pluto = new PlutoInMemory();
 
 const useSDK = (mediatorDID: SDK.Domain.DID) => {
-  const agent = SDK.Agent.initialize({ mediatorDID, pluto });
+  const agent = SDK.Agent.initialize({mediatorDID, pluto});
 
-  return { agent, pluto };
+  return {agent, pluto};
 };
 
 function Mnemonics() {
@@ -38,38 +37,38 @@ function Mnemonics() {
   }
 
   return (
-    <Box>
-      <h2>Mnemonics and keys</h2>
+      <Box>
+        <h2>Mnemonics and keys</h2>
 
-      <button onClick={createMnemonics}>Generate random mnemonics</button>
-      <Spacer />
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-        }}
-      >
-        {mnemonics
-          ? mnemonics.map((word, i) => (
-            <span
-              key={i + word}
-              style={{
-                margin: 7,
-                padding: "4px 10px",
-                background: "lightgray",
-                borderRadius: 6,
-              }}
-            >
+        <button onClick={createMnemonics}>Generate random mnemonics</button>
+        <Spacer/>
+        <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+            }}
+        >
+          {mnemonics
+              ? mnemonics.map((word, i) => (
+                  <span
+                      key={i + word}
+                      style={{
+                        margin: 7,
+                        padding: "4px 10px",
+                        background: "lightgray",
+                        borderRadius: 6,
+                      }}
+                  >
               {i + 1}. {word}
             </span>
-          ))
-          : null}
-      </div>
-    </Box>
+              ))
+              : null}
+        </div>
+      </Box>
   );
 }
 
-function KeyPair({ curve = SDK.Domain.Curve.SECP256K1 }: { curve?: SDK.Domain.Curve; }) {
+function KeyPair({curve = SDK.Domain.Curve.SECP256K1}: { curve?: SDK.Domain.Curve; }) {
   const [mnemonics] = useAtom(mnemonicsAtom);
   // let [keyPair, setKeyPair] = React.useState<Domain.KeyPair | null>(null);
   const [keyPair, setKeyPair] = React.useState<SDK.Domain.KeyPair>();
@@ -94,50 +93,50 @@ function KeyPair({ curve = SDK.Domain.Curve.SECP256K1 }: { curve?: SDK.Domain.Cu
   }
 
   return (
-    <div
-      style={{
-        borderRadius: 10,
-        border: "1px solid lightgray",
-        padding: 20,
-        margin: 20,
-      }}
-    >
-      <h3>{curve} key pair</h3>
-      <button onClick={createKeyPair}>Generate key pair</button>
-      <Spacer />
       <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-        }}
+          style={{
+            borderRadius: 10,
+            border: "1px solid lightgray",
+            padding: 20,
+            margin: 20,
+          }}
       >
-        {keyPair ? (
-          <div>
-            <p>
-              <b>Curve:</b> {keyPair.curve}
-            </p>
-            <p>
-              <b>Public key:</b>{" "}
-              {trimString(jose.base64url.encode(keyPair.publicKey.value), 50)}
-            </p>
-            <p>
-              <b>Private key:</b>{" "}
-              {trimString(jose.base64url.encode(keyPair.privateKey.value), 50)}
-            </p>
+        <h3>{curve} key pair</h3>
+        <button onClick={createKeyPair}>Generate key pair</button>
+        <Spacer/>
+        <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+        >
+          {keyPair ? (
+              <div>
+                <p>
+                  <b>Curve:</b> {keyPair.curve}
+                </p>
+                <p>
+                  <b>Public key:</b>{" "}
+                  {trimString(jose.base64url.encode(keyPair.publicKey.value), 50)}
+                </p>
+                <p>
+                  <b>Private key:</b>{" "}
+                  {trimString(jose.base64url.encode(keyPair.privateKey.value), 50)}
+                </p>
 
-            <hr />
+                <hr/>
 
-            <Signatures keyPair={keyPair} />
-          </div>
-        ) : (
-          <p>No key pair created</p>
-        )}
+                <Signatures keyPair={keyPair}/>
+              </div>
+          ) : (
+              <p>No key pair created</p>
+          )}
+        </div>
       </div>
-    </div>
   );
 }
 
-function Signatures({ keyPair }: { keyPair: SDK.Domain.KeyPair; }) {
+function Signatures({keyPair}: { keyPair: SDK.Domain.KeyPair; }) {
   const [signatureEncoded, setSignatureEncoded] = React.useState<string | undefined>(undefined);
   const [isSignatureValid, setIsSignatureValid] = React.useState<boolean | undefined>(undefined);
 
@@ -171,21 +170,21 @@ function Signatures({ keyPair }: { keyPair: SDK.Domain.KeyPair; }) {
   }
 
   return (
-    <div>
-      <button onClick={signData}>Sign</button>
-      <p>Signature of &quot;hello world&quot;:</p>
-      <textarea
-        value={signatureEncoded}
-        onChange={(e) => setSignatureEncoded(e.target.value)}
-      />
-      <Spacer />
-      <button onClick={verifySignature}>Verify signature</button>
-      <p>
-        {typeof isSignatureValid === "boolean"
-          ? `Signature is ${isSignatureValid ? "valid" : "invalid"}`
-          : null}
-      </p>
-    </div>
+      <div>
+        <button onClick={signData}>Sign</button>
+        <p>Signature of &quot;hello world&quot;:</p>
+        <textarea
+            value={signatureEncoded}
+            onChange={(e) => setSignatureEncoded(e.target.value)}
+        />
+        <Spacer/>
+        <button onClick={verifySignature}>Verify signature</button>
+        <p>
+          {typeof isSignatureValid === "boolean"
+              ? `Signature is ${isSignatureValid ? "valid" : "invalid"}`
+              : null}
+        </p>
+      </div>
   );
 }
 
@@ -216,6 +215,7 @@ function Dids() {
       exampleService,
     ]);
 
+
     setPrismDid(prismDID);
   }
 
@@ -241,8 +241,8 @@ function Dids() {
     });
 
     const peerDID = await castor.createPeerDID(
-      [authPrivateKey.publicKey(), keyAgreementPrivateKey.publicKey()],
-      [exampleService]
+        [authPrivateKey.publicKey(), keyAgreementPrivateKey.publicKey()],
+        [exampleService]
     );
 
     setPeerDid(peerDID);
@@ -257,62 +257,62 @@ function Dids() {
   }
 
   return (
-    <Box>
-      <h3>DIDs</h3>
-      <button onClick={createPrismDid}>Create PRISM DID</button>
-      {prismDid ? (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "space-around",
-            height: 100,
-          }}
-        >
-          <b>PRISM DID: </b>
-          <div
-            style={{
-              overflow: "auto",
-              width: "100%",
-            }}
-          >
-            {prismDid.toString()}
-          </div>
-          <button style={{ width: 120 }} onClick={resolvePrismDid}>
-            Resolve
-          </button>
-        </div>
-      ) : null}
+      <Box>
+        <h3>DIDs</h3>
+        <button onClick={createPrismDid}>Create PRISM DID</button>
+        {prismDid ? (
+            <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "space-around",
+                  height: 100,
+                }}
+            >
+              <b>PRISM DID: </b>
+              <div
+                  style={{
+                    overflow: "auto",
+                    width: "100%",
+                  }}
+              >
+                {prismDid.toString()}
+              </div>
+              <button style={{width: 120}} onClick={resolvePrismDid}>
+                Resolve
+              </button>
+            </div>
+        ) : null}
 
-      <Spacer />
+        <Spacer/>
 
-      <button onClick={createPeerDid}>Create Peer DID</button>
-      {peerDid ? (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "space-around",
-            height: 100,
-          }}
-        >
-          <b>Peer DID: </b>
-          <div
-            style={{
-              overflow: "auto",
-              width: "100%",
-            }}
-          >
-            {peerDid.toString()}
-          </div>
-          <button style={{ width: 120 }} onClick={resolvePeerDid}>
-            Resolve
-          </button>
-        </div>
-      ) : null}
-    </Box>
+        <button onClick={createPeerDid}>Create Peer DID</button>
+        {peerDid ? (
+            <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "space-around",
+                  height: 100,
+                }}
+            >
+              <b>Peer DID: </b>
+              <div
+                  style={{
+                    overflow: "auto",
+                    width: "100%",
+                  }}
+              >
+                {peerDid.toString()}
+              </div>
+              <button style={{width: 120}} onClick={resolvePeerDid}>
+                Resolve
+              </button>
+            </div>
+        ) : null}
+      </Box>
   );
 }
 
@@ -332,6 +332,7 @@ const OOB: React.FC<{ agent: SDK.Agent, pluto: SDK.Domain.Pluto; }> = props => {
   const handleOnChange = (e: any) => {
     setOOB(e.target.value);
   };
+
   async function handleParseOOB() {
     if (!oob) {
       return;
@@ -346,14 +347,14 @@ const OOB: React.FC<{ agent: SDK.Agent, pluto: SDK.Domain.Pluto; }> = props => {
     <p>PRISM Agent connection</p>
 
     <p>
-      <input type="text" value={oob ?? ""} onChange={handleOnChange} />
+      <input type="text" value={oob ?? ""} onChange={handleOnChange}/>
     </p>
-    <button style={{ width: 120 }} onClick={handleParseOOB}>Create connection</button>
+    <button style={{width: 120}} onClick={handleParseOOB}>Create connection</button>
 
     {!!connection && (
-      <>
-        <p>Stored OOB Connection at <b>{connection.name}</b></p>
-      </>
+        <>
+          <p>Stored OOB Connection at <b>{connection.name}</b></p>
+        </>
     )}
   </>;
 };
@@ -363,7 +364,7 @@ const Agent: React.FC<{}> = props => {
 
   const sdk = useMemo(() => useSDK(SDK.Domain.DID.fromString(mediatorDID)), [mediatorDID]);
 
-  const { pluto, agent } = sdk;
+  const {pluto, agent} = sdk;
 
   const [state, setState] = React.useState<string>(agent.state);
   const [error, setError] = React.useState<any>();
@@ -399,7 +400,6 @@ const Agent: React.FC<{}> = props => {
     if (credentialOffers.length) {
       for (const credentialOfferMessage of credentialOffers) {
         const credentialOffer = OfferCredential.fromMessage(credentialOfferMessage);
-
         const requestCredential = await agent.prepareRequestCredentialWithIssuer(credentialOffer);
         try {
           await agent.sendMessage(requestCredential.makeMessage());
@@ -451,13 +451,13 @@ const Agent: React.FC<{}> = props => {
       }
 
       const secondaryDID = await agent.createNewPeerDID(
-        [],
-        true
+          [],
+          true
       );
       const testMessage = new BasicMessage(
-        { content: "Test Message" },
-        secondaryDID,
-        secondaryDID
+          {content: "Test Message"},
+          secondaryDID,
+          secondaryDID
       ).makeMessage();
 
       try {
@@ -483,15 +483,14 @@ const Agent: React.FC<{}> = props => {
     const from = message?.from as SDK.Domain.DID;
     try {
       await agent.sendMessage(
-        new BasicMessage(
-          { content: text },
-          from,
-          from
-        ).makeMessage()
-
+          new BasicMessage(
+              {content: text},
+              from,
+              from
+          ).makeMessage()
       );
+    } catch (e) {
     }
-    catch (e) {}
   };
 
   const handleStop = async () => {
@@ -501,139 +500,139 @@ const Agent: React.FC<{}> = props => {
   };
 
   return (
-    <Box>
-      <h2>Agent</h2>
-      <p>
-        <b>Status:</b>&nbsp; {state}
-      </p>
-      <div>
-        {state === "stopped" && (
-          <>
-            <div>
-              Set the mediatorDID here:<br />
-              <input
-                type="text"
-                style={{ width: "75%", padding: "5px" }}
-                onChange={(e) => {
-                  try {
-                    SDK.Domain.DID.fromString(e.target.value);
-                    setMediatorDID(e.target.value);
-                  } catch (err) {
-                    console.log(err);
-                  }
-                }} value={mediatorDID} />
-            </div>
-            <button style={{ width: 120 }} onClick={handleStart}>Start</button>
-          </>
-        )}
-
-        {state === "running" && (
-          <>
-            <button style={{ width: 120 }} onClick={handleStop}>Stop</button>
-            <hr />
-            <OOB agent={agent} pluto={pluto} />
-
-            {messages.map((message, i) => {
-              const body = JSON.parse(message.body);
-
-              // if (message.piuri === "https://atalaprism.io/mercury/connections/1.0/response") {
-              //   return <div key={`responseField${i}`}>
-              //     <p>Connection Established with {message.from!.toString()} (Goal: {body.goal})?</p>
-              //     <p>Message {message.id} {JSON.stringify(message)}</p>
-              //   </div>;
-              // }
-
-              const parsed = { ...message };
-              if (typeof parsed.body === "string") {
-                (parsed as any).body = JSON.parse(message.body);
-              }
-
-              const attachments = message.attachments.reduce((acc, x) => {
-                if ("base64" in x.data) {
-                  if (x.format === "prism/jwt") {
-                    const decodedFirst = Buffer.from(x.data.base64, "base64").toString();
-                    const decoded = Buffer.from(decodedFirst.split(".")[1], "base64").toString();
-                    const parsed = JSON.parse(decoded);
-
-                    return acc.concat(parsed);
-                  }
-
-                  const decoded = Buffer.from(x.data.base64, "base64").toString();
-                  const parsed = JSON.parse(decoded);
-
-                  return acc.concat(parsed);
-                }
-
-                return acc;
-              }, []);
-
-              return <Box key={`responseField${i}`}>
+      <Box>
+        <h2>Agent</h2>
+        <p>
+          <b>Status:</b>&nbsp; {state}
+        </p>
+        <div>
+          {state === "stopped" && (
+              <>
                 <div>
-                  <b>Message: </b> {message.id}
-                  {message.piuri === "https://atalaprism.io/mercury/connections/1.0/response" && (
-                    <p>Connection Established with {message.from!.toString()} (Goal: {body.goal})?</p>
-                  )}
-                  <pre style={{
-                    background: "lightBlue",
-                    textAlign: "left",
-                    wordWrap: "break-word",
-                    wordBreak: "break-all",
-                    whiteSpace: "pre-wrap",
-                  }}
-                  >
+                  Set the mediatorDID here:<br/>
+                  <input
+                      type="text"
+                      style={{width: "75%", padding: "5px"}}
+                      onChange={(e) => {
+                        try {
+                          SDK.Domain.DID.fromString(e.target.value);
+                          setMediatorDID(e.target.value);
+                        } catch (err) {
+                          console.log(err);
+                        }
+                      }} value={mediatorDID}/>
+                </div>
+                <button style={{width: 120}} onClick={handleStart}>Start</button>
+              </>
+          )}
+
+          {state === "running" && (
+              <>
+                <button style={{width: 120}} onClick={handleStop}>Stop</button>
+                <hr/>
+                <OOB agent={agent} pluto={pluto}/>
+
+                {messages.map((message, i) => {
+                  const body = JSON.parse(message.body);
+
+                  // if (message.piuri === "https://atalaprism.io/mercury/connections/1.0/response") {
+                  //   return <div key={`responseField${i}`}>
+                  //     <p>Connection Established with {message.from!.toString()} (Goal: {body.goal})?</p>
+                  //     <p>Message {message.id} {JSON.stringify(message)}</p>
+                  //   </div>;
+                  // }
+
+                  const parsed = {...message};
+                  if (typeof parsed.body === "string") {
+                    (parsed as any).body = JSON.parse(message.body);
+                  }
+
+                  const attachments = message.attachments.reduce((acc, x) => {
+                    if ("base64" in x.data) {
+                      if (x.format === "prism/jwt") {
+                        const decodedFirst = Buffer.from(x.data.base64, "base64").toString();
+                        const decoded = Buffer.from(decodedFirst.split(".")[1], "base64").toString();
+                        const parsed = JSON.parse(decoded);
+
+                        return acc.concat(parsed);
+                      }
+
+                      const decoded = Buffer.from(x.data.base64, "base64").toString();
+                      const parsed = JSON.parse(decoded);
+
+                      return acc.concat(parsed);
+                    }
+
+                    return acc;
+                  }, []);
+
+                  return <Box key={`responseField${i}`}>
+                    <div>
+                      <b>Message: </b> {message.id}
+                      {message.piuri === "https://atalaprism.io/mercury/connections/1.0/response" && (
+                          <p>Connection Established with {message.from!.toString()} (Goal: {body.goal})?</p>
+                      )}
+                      <pre style={{
+                        background: "lightBlue",
+                        textAlign: "left",
+                        wordWrap: "break-word",
+                        wordBreak: "break-all",
+                        whiteSpace: "pre-wrap",
+                      }}
+                      >
                     {JSON.stringify(parsed, null, 2)}
 
                   </pre>
-                  {attachments.length > 0 && (
-                    <pre style={{
-                      background: "lightCyan",
-                      textAlign: "left",
-                      wordWrap: "break-word",
-                      wordBreak: "break-all",
-                      whiteSpace: "pre-wrap",
-                    }}
-                    >
+                      {attachments.length > 0 && (
+                          <pre style={{
+                            background: "lightCyan",
+                            textAlign: "left",
+                            wordWrap: "break-word",
+                            wordBreak: "break-all",
+                            whiteSpace: "pre-wrap",
+                          }}
+                          >
                       <b>Attachments:</b>
-                      {attachments.map(x => JSON.stringify(x, null, 2))}
+                            {attachments.map(x => JSON.stringify(x, null, 2))}
                     </pre>
-                  )}
+                      )}
 
-                </div>
+                    </div>
 
-                <input type="text" value={newMessage[i]} onChange={(e) => handleOnChange(e, i)} />
+                    <input type="text" value={newMessage[i]} onChange={(e) => handleOnChange(e, i)}/>
 
-                <button style={{ width: 120 }} onClick={() => {
-                  handleSend(i);
-                }}>Respond</button>
-              </Box>;
-            })}
-          </>
-        )}
-      </div>
+                    <button style={{width: 120}} onClick={() => {
+                      handleSend(i);
+                    }}>Respond
+                    </button>
+                  </Box>;
+                })}
+              </>
+          )}
+        </div>
 
-      {error instanceof Error && (
-        <pre>
+        {error instanceof Error && (
+            <pre>
           Error: {error.message}
         </pre>
-      )}
-    </Box>
+        )}
+      </Box>
   );
 };
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>Atala PRISM Wallet SDK Usage Examples</h1>
-      <Agent />
-      <Mnemonics />
-      <Spacer />
-      <KeyPair curve={SDK.Domain.Curve.SECP256K1} />
-      <KeyPair curve={SDK.Domain.Curve.ED25519} />
-      <KeyPair curve={SDK.Domain.Curve.X25519} />
-      <Dids />
-      <Spacer />
-    </div>
+      <div className="App">
+        <h1>Atala PRISM Wallet SDK Usage Examples</h1>
+        <Agent/>
+        <Mnemonics/>
+        <Spacer/>
+        <KeyPair curve={SDK.Domain.Curve.SECP256K1}/>
+        <KeyPair curve={SDK.Domain.Curve.ED25519}/>
+        <KeyPair curve={SDK.Domain.Curve.X25519}/>
+        <Dids/>
+      </div>
   );
 }
 
