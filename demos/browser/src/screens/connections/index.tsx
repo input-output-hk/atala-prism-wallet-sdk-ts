@@ -11,8 +11,8 @@ import {useNotification} from '../../components/notification/state';
 import Spacer from '../../components/spacer/spacer';
 import SideNavigation, {SideNavigationCollectionItemProps} from '../../components/side-navigation';
 import {Outlet, useNavigate, useParams} from 'react-router-dom';
-import ReactJson from 'react-json-view';
 import {truncateDID} from '../../utils';
+import PRISMJSONView from '../../components/prism-json-view';
 
 type InputData = {
   oob: string;
@@ -48,7 +48,7 @@ function ViewConnectionScreen() {
   return (
       <div>
         <Typography type="display">{name}</Typography>
-        <ReactJson src={connection}/>
+        <PRISMJSONView data={connection}/>
       </div>
   );
 }
