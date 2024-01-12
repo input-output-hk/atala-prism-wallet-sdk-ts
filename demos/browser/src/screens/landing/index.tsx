@@ -8,7 +8,7 @@ export default function LandingScreen() {
   return (
       <Screen>
         <LandingBox>
-          <Typography type="display" $size="xl" $weight="semibold"><>Welcome to our <br/><>wallet
+          <Typography type="display" $size="xl" $weight="semibold"><>Welcome to <br/><>wallet
             demo
           </>
           </>

@@ -35,17 +35,28 @@ useAgentState.subscribe(({agent}) => {
   if (agent) {
     agent.addListener(ListenerKey.MESSAGE, async (message) => {
       if (Array.isArray(message) && message.at(0)) {
-        console.log(message.at(0));
+        console.log(message);
         switch (message.at(0).piuri) {
           case 'https://didcomm.org/issue-credential/3.0/offer-credential':
 
             const credentialOffer = SDK.OfferCredential.fromMessage(message.at(0));
             useCredentialsState.getState().addOffer(credentialOffer);
+            break;
+          case "https://didcomm.org/issue-credential/3.0/issue-credential":
+            const issuedCredential = SDK.IssueCredential.fromMessage(message.at(0));
 
+            const credential = await agent.processIssuedCredentialMessage(issuedCredential);
+            useCredentialsState.getState().addCredential(credential);
+            useNotification.getState().pushNotification({state: "success", message: "New credential received"});
             break;
           case 'https://atalaprism.io/mercury/connections/1.0/response':
             // @ts-ignore
             useNotification.getState().pushNotification({state: "success", message: "Received a new connection"});
+            break;
+          case 'https://didcomm.atalaprism.io/present-proof/3.0/request-presentation':
+            const proof = SDK.RequestPresentation.fromMessage(message.at(0));
+            useCredentialsState.getState().addProof(proof);
+            useNotification.getState().pushNotification({state: "success", message: "New proof request received"});
         }
 
       }

@@ -23,6 +23,7 @@
     "pluto-encrypted": "^1.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-json-tree": "^0.18.0",
     "react-json-view": "^1.21.3",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.19.0",

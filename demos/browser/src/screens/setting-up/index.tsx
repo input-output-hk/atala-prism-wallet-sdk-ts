@@ -38,14 +38,13 @@ enum AgentState {
   STOPPING = "stopping"
 }
 
-const defaultMediatorDID = "did:peer:2.Ez6LSghwSE437wnDE1pt3X6hVDUQzSjsHzinpX3XFvMjRAm7y.Vz6Mkhh1e5CEYYq6JBUcTZ6Cp2ranCWRrv7Yax3Le4N59R6dd.SeyJ0IjoiZG0iLCJzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwiciI6W10sImEiOlsiZGlkY29tbS92MiJdfQ";
+const defaultMediatorDID = "did:peer:2.Ez6LSghwSE437wnDE1pt3X6hVDUQzSjsHzinpX3XFvMjRAm7y.Vz6Mkhh1e5CEYYq6JBUcTZ6Cp2ranCWRrv7Yax3Le4N59R6dd.SeyJ0IjoiZG0iLCJzIjoiaHR0cHM6Ly9iZXRhLW1lZGlhdG9yLmF0YWxhcHJpc20uaW8iLCJyIjpbXSwiYSI6WyJkaWRjb21tL3YyIl19";
 const INITIAL_DATA = {
   did: defaultMediatorDID,
 };
 export default function SettingUpScreen() {
   const {pluto, agent, init: initAgent} = useAgentState();
   const notification = useNotification();
-  // const [mediatorDID, setMediatorDID] = useState<string>(defaultMediatorDID);
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
 
@@ -140,27 +139,6 @@ export default function SettingUpScreen() {
       throw e;
     }
 
-    // const secondaryDID = await agentRef.createNewPeerDID(
-    //     [],
-    //     true
-    // );
-    // const testMessage = new BasicMessage(
-    //     {content: "Test Message"},
-    //     secondaryDID,
-    //     secondaryDID
-    // ).makeMessage();
-    //
-    // try {
-    //   await agentRef.sendMessage(testMessage);
-    // } catch (err) {
-    //   notification.pushNotification({
-    //     state: "error",
-    //     message: "There was some error, while attempting to send a message. Please check the logs to learn more. "
-    //   });
-    //   setState(AgentState.STOPPED);
-    //   setError(err);
-    //   console.log(err);
-    // }
   }, [initAgent, notification]);
 
 
