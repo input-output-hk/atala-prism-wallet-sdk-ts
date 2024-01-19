@@ -1,13 +1,7 @@
 import Typography from '../../components/typography';
 import WalletScreen from '../../components/wallet-screen';
 import React, {useCallback, useEffect} from 'react';
-import * as SDK from '@input-output-hk/atala-prism-wallet-sdk';
-import {
-  IssueCredential,
-  ListenerKey,
-  OfferCredential,
-  RequestPresentation
-} from '@input-output-hk/atala-prism-wallet-sdk';
+import SDK from "@atala/prism-wallet-sdk";
 import {CommonWrapperBox} from './index.style';
 import Spacer from '../../components/spacer/spacer';
 import Form, {FormHandler} from '../../components/form';
@@ -68,7 +62,7 @@ export default function SettingUpScreen() {
       for (const requestPresentation of requestPresentations) {
         const lastCredentials = await pluto.getAllCredentials();
         const lastCredential = lastCredentials.at(-1);
-        const requestPresentationMessage = RequestPresentation.fromMessage(requestPresentation);
+        const requestPresentationMessage = SDK.RequestPresentation.fromMessage(requestPresentation);
         try {
           if (lastCredential === undefined) throw new Error("last credential not found");
 
@@ -81,7 +75,7 @@ export default function SettingUpScreen() {
     }
     if (credentialOffers.length) {
       for (const credentialOfferMessage of credentialOffers) {
-        const credentialOffer = OfferCredential.fromMessage(credentialOfferMessage);
+        const credentialOffer = SDK.OfferCredential.fromMessage(credentialOfferMessage);
 
         const requestCredential = await agent.prepareRequestCredentialWithIssuer(credentialOffer);
         try {
@@ -93,7 +87,7 @@ export default function SettingUpScreen() {
     }
     if (issuedCredentials.length) {
       for (const issuedCredential of issuedCredentials) {
-        const issueCredential = IssueCredential.fromMessage(issuedCredential);
+        const issueCredential = SDK.IssueCredential.fromMessage(issuedCredential);
         await agent.processIssuedCredentialMessage(issueCredential);
       }
     }
@@ -101,9 +95,9 @@ export default function SettingUpScreen() {
   };
 
   useEffect(() => {
-    agent?.addListener(ListenerKey.MESSAGE, handleMessages);
+    agent?.addListener(SDK.ListenerKey.MESSAGE, handleMessages);
     return () => {
-      agent?.removeListener(ListenerKey.MESSAGE, handleMessages);
+      agent?.removeListener(SDK.ListenerKey.MESSAGE, handleMessages);
     };
   });
 

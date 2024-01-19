@@ -1,5 +1,5 @@
 import {create} from 'zustand';
-import * as SDK from '@input-output-hk/atala-prism-wallet-sdk';
+import * as SDK from "@atala/prism-wallet-sdk";
 import {ListenerKey} from '@input-output-hk/atala-prism-wallet-sdk';
 import {getDB} from '../config/pluto';
 import {useNotification} from '../components/notification/state';

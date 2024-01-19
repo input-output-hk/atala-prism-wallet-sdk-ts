@@ -1,7 +1,8 @@
 import Typography from '../../components/typography';
 import WalletScreen from '../../components/wallet-screen';
 import React, {useCallback, useEffect} from 'react';
-import * as SDK from '@input-output-hk/atala-prism-wallet-sdk';
+import * as SDK from "@atala/prism-wallet-sdk";
+// import * as SDK from "@atala/prism-wallet-sdk";
 import {
   IssueCredential,
   ListenerKey,

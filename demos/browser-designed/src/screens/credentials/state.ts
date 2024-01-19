@@ -1,5 +1,5 @@
 import {create} from 'zustand';
-import * as SDK from '@input-output-hk/atala-prism-wallet-sdk';
+import SDK from "@atala/prism-wallet-sdk";
 import useAgentState from '../../global/agent-state';
 
 type UseCredentialState = {

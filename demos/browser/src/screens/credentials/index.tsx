@@ -2,7 +2,7 @@ import {useCredentialsState} from './state';
 import {ChangeEventHandler, useCallback, useEffect, useState} from 'react';
 import Badge from '../../components/badge';
 import Button from '../../components/button';
-import * as SDK from '@input-output-hk/atala-prism-wallet-sdk';
+import * as SDK from "@atala/prism-wallet-sdk";
 import useAgentState from '../../global/agent-state';
 import {useNotification} from '../../components/notification/state';
 import {CredentialIssuedRecord, CredentialOfferRecord, CredentialRecords} from './style';

@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@atala/prism-wallet-sdk": "^4.0.0-rc.1",
     "@hyperjump/json-schema": "^1.6.5",
-    "@input-output-hk/atala-prism-wallet-sdk": "file:../../",
+    "@pluto-encrypted/indexdb": "^1.11.2",
+    "@pluto-encrypted/inmemory": "^1.11.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -30,7 +32,7 @@
     "zustand": "^4.4.6"
   },
   "scripts": {
-    "start": "npm run build && craco start",
+    "start": "craco start",
     "build": "craco build",
     "test": "craco test"
   },

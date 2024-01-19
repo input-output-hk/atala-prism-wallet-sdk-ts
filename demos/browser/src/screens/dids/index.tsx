@@ -15,12 +15,13 @@ import Form, {FormHandler} from '../../components/form';
 import schema from './create-did.schema.json';
 import Input from '../../components/input';
 import apollo from '../../config/apollo';
-import * as SDK from '@input-output-hk/atala-prism-wallet-sdk';
+import * as SDK from "@atala/prism-wallet-sdk";
+import {Domain} from "@atala/prism-wallet-sdk";
 import castor from '../../config/castor';
 import Dropdown from '../../components/dropdown';
 import queryClient from '../../config/query-client';
 import useAgentState from '../../global/agent-state';
-import ReactJson from 'react-json-view';
+import PRISMJSONView from '../../components/prism-json-view';
 
 function usePeerDIDs() {
   const agent = useAgentState();
@@ -37,7 +38,7 @@ function usePrismDIDs() {
   });
 }
 
-const exampleService = new SDK.Domain.Service("didcomm", ["DIDCommMessaging"], {
+const exampleService = new Domain.Service("didcomm", ["DIDCommMessaging"], {
   uri: "https://example.com/endpoint",
   accept: ["didcomm/v2"],
   routingKeys: ["did:example:somemediator#somekey"],
@@ -115,9 +116,7 @@ function ViewDID() {
   }, [param]);
   return (
       <div>
-        <ReactJson displayDataTypes={true} collapseStringsAfterLength={50} src={did.data} key={param.did}
-                   collapsed={false}/>
-        {/*<Typography type="text" $color="gray" $tint="900">{JSON.stringify(did.data)}</Typography>*/}
+        <PRISMJSONView data={did.data}/>
       </div>
   );
 }

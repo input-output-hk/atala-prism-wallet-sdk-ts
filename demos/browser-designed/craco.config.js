@@ -20,10 +20,10 @@ module.exports = {
                     patterns: [
                         {
                             context:
-                                "node_modules/@input-output-hk/atala-prism-wallet-sdk/build/browser/",
+                                "node_modules/@atala/prism-wallet-sdk/build/",
                             from: path.resolve(
                                 __dirname,
-                                "node_modules/@input-output-hk/atala-prism-wallet-sdk/build/browser/*.wasm"
+                                "node_modules/@atala/prism-wallet-sdk/build/node-wasm/*.wasm"
                             ),
                             to: path.resolve(__dirname, "public"),
                         },

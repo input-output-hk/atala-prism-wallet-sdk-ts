@@ -1,6 +1,6 @@
 import {create} from 'zustand';
 import apollo from '../config/apollo';
-import SDK from '@input-output-hk/atala-prism-wallet-sdk';
+import SDK from '@atala/prism-wallet-sdk';
 
 export type ApolloState = {
   mnemonics: SDK.Domain.MnemonicWordList,

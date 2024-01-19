@@ -1,6 +1,5 @@
 import {create} from 'zustand';
-import * as SDK from '@input-output-hk/atala-prism-wallet-sdk';
-import {ListenerKey} from '@input-output-hk/atala-prism-wallet-sdk';
+import SDK from '@atala/prism-wallet-sdk';
 import {getDB} from '../config/pluto';
 import {useNotification} from '../components/notification/state';
 import {useCredentialsState} from '../screens/credentials/state';
@@ -11,12 +10,12 @@ type AgentState = {
   pluto: SDK.Domain.Pluto | null,
 }
 
-
 const useAgentState = create<AgentState>((setState) => ({
   agent: null,
   pluto: null,
   init: async (mediatorDID) => {
     const db = await getDB();
+    console.log(mediatorDID);
     const ref = SDK.Agent.initialize({
       pluto: db,
       mediatorDID
@@ -33,9 +32,8 @@ useAgentState.subscribe(({agent}) => {
   *  - "Offer Credential" goal code seems like is inconsistent with io.atalaprism.connect, I suggest to make it io.atalaprism.credential.offer
   * */
   if (agent) {
-    agent.addListener(ListenerKey.MESSAGE, async (message) => {
+    agent.addListener(SDK.ListenerKey.MESSAGE, async (message) => {
       if (Array.isArray(message) && message.at(0)) {
-        console.log(message);
         switch (message.at(0).piuri) {
           case 'https://didcomm.org/issue-credential/3.0/offer-credential':
 
