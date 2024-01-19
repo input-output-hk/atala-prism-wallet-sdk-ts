@@ -1,0 +1,14 @@
+{
+  "$id": "http://localhost:3000/schemas/invitation.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "oob": {
+      "type": "string",
+      "minLength": 10
+    }
+  },
+  "required": [
+    "oob"
+  ]
+}
