@@ -20,15 +20,19 @@ on:
       publishedDid:
         required: false
         description: Published DID
-      schemaId:
+      jwtSchemaGuid:
         required: false
-        description: Schema ID
+        description: JWT schema GUID
+        default: 
+      anoncredDefinitionGuid:
+        required: false
+        description: Anoncred definition GUID
       apiKey:
         required: false
         description: Authorization key
-  pull_request:
-    branches:
-      - master
+  # pull_request:
+  #   branches:
+  #     - master
   push:
     branches:
       - master
@@ -49,6 +53,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
+          submodules: 'true' 
 
       - name: Setup Node.js for @input-output-hk
         uses: actions/setup-node@v3
@@ -58,6 +63,16 @@ jobs:
           node-version: "lts/*"
           registry-url: https://npm.pkg.github.com/
           scope: "@input-output-hk"
+
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+
+      - name: Install wasm-pack
+        run: |
+          curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 
       - name: Setup Node.js for @hyperledger-labs
         uses: actions/setup-node@v3
@@ -92,7 +107,8 @@ jobs:
           MEDIATOR_OOB_URL: ${{ inputs.mediatorOobUrl || vars.MEDIATOR_OOB_URL }}
           PRISM_AGENT_URL: ${{ inputs.prismAgentUrl || vars.PRISM_AGENT_URL }}
           PUBLISHED_DID: ${{ inputs.publishedDid || vars.PUBLISHED_DID }}
-          SCHEMA_ID: ${{ inputs.schemaId || vars.SCHEMA_ID }}
+          JWT_SCHEMA_GUID: ${{ inputs.jwtSchemaGuid || vars.JWT_SCHEMA_GUID }}
+          ANONCRED_DEFINITION_GUID: ${{ inputs.anoncredDefinitionGuid || vars.ANONCRED_DEFINITION_GUID }}
           APIKEY: ${{ inputs.apiKey || secrets.APIKEY }}
         working-directory: integration-tests/e2e-tests
         run: yarn test:sdk

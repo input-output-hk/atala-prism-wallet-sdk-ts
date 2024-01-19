@@ -1,11 +1,10 @@
 import typescript from "rollup-plugin-typescript2";
 
-import terser from "@rollup/plugin-terser";
 import cleanup from "rollup-plugin-cleanup";
 import ignore from "rollup-plugin-ignore";
 import json from "@rollup/plugin-json";
-import commonjs from "@rollup/plugin-commonjs";
-import jsccPlugin from "rollup-plugin-jscc";
+
+const isDev = process.env.NODE_ENV === "development";
 
 const externals = [
   "@scure/bip39/wordlists/english",
@@ -24,40 +23,33 @@ const externals = [
   "bn.js",
   "did-jwt",
   "axios",
-  "didcomm",
-  "didcomm-node",
-  "didcomm-browser",
-  "anoncreds-browser",
-  "anoncreds-node",
+  "apollo",
 ];
 
-export default (output, plugins = []) => {
-  return {
-    input: ["src/index.ts"],
-    output: {
-      sourcemap: true,
-      dir: `build/${output.mode}`,
-      format: output.format ?? "esm",
-      name: "prism",
-      paths: output.paths
-    },
-    plugins: [
-      jsccPlugin({ values: { _ANONCREDS: true } }),
-      ignore(externals),
-      json(),
-      typescript({
-        useTsconfigDeclarationDir: true,
-        tsconfigOverride: {
-          compilerOptions: {
-            emitDeclarationOnly: false,
-          },
+export default (outputs, plugins = []) => {
+  const commonPlugins = [
+    ...plugins,
+    ignore(externals),
+    json(),
+    typescript({
+      useTsconfigDeclarationDir: false,
+      tsconfigOverride: {
+        compilerOptions: {
+          emitDeclarationOnly: false,
         },
-      }),
-      terser(),
-      ...plugins,
-      commonjs(),
-      cleanup(),
-    ],
-    external: externals,
-  };
+      },
+    }),
+    cleanup(),
+  ]
+  return outputs.map((output) => {
+    return {
+      input: "src/index.ts",
+      output: {
+        sourcemap: isDev,
+        ...output
+      },
+      plugins: commonPlugins,
+      external: externals,
+    }
+  })
 };

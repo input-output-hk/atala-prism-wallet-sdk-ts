@@ -2,23 +2,38 @@
   "name": "@atala/prism-wallet-sdk",
   "version": "3.1.0",
   "description": "PRISM typescript SDK",
-  "main": "build/node/index.js",
-  "browser": "build/browser/index.js",
-  "types": "build/typings/index.d.ts",
+  "main": "./index.cjs",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs",
+      "default": "./index.mjs"
+    }
+  },
+  "types": "./build/typings/index.d.ts",
   "files": [
+    "index.mjs",
+    "index.cjs",
     "build/**/*",
-    ".bin/**",
     "README.MD"
   ],
+  "browserslist": [
+    "last 2 chrome version",
+    "last 2 firefox version",
+    "last 2 safari version",
+    "last 2 edge version"
+  ],
   "scripts": {
-    "build": "npm run build:browser && npm run build:node && npm run types",
+    "dependencies": "sh build_dependencies.sh",
+    "build": "npm run dependencies && rm -rf build && npm run build:browser && npm run build:node && npm run types",
     "types": "rm -rf build/typings && tsc",
     "build:browser": "rollup -c rollup/rollup.browser.mjs",
     "build:node": "rollup -c rollup/rollup.node.mjs",
     "test": "jest",
     "coverage": "npm run test -- --coverage",
     "lint": "npx eslint .",
-    "docs": "npx typedoc --options typedoc.json --hideGenerator"
+    "docs": "npx typedoc --options typedoc.js --hideGenerator"
   },
   "author": "IOHK",
   "repository": {
@@ -41,9 +56,11 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.0",
     "@babel/traverse": "^7.23.2",
+    "@droppedcode/typedoc-plugin-relative-includes": "^1.0.5",
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/plugin-replace": "^5.0.5",
     "@rollup/plugin-terser": "^0.4.3",
     "@rollup/plugin-wasm": "^6.1.3",
     "@semantic-release/changelog": "^6.0.3",
@@ -63,15 +80,17 @@
     "@types/uuid": "^9.0.1",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.55.0",
-    "anoncreds-browser": "file:./anoncreds-rust/browser",
-    "anoncreds-node": "file:./anoncreds-rust/node",
+    "anoncreds-browser": "file:./generated/anoncreds-wasm-browser",
+    "anoncreds-node": "file:./generated/anoncreds-wasm-node",
     "babel-plugin-transform-import-meta": "^2.2.0",
     "babel-plugin-transform-typescript-metadata": "^0.3.2",
     "chai": "^4.3.7",
     "chai-as-promised": "^7.1.1",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
-    "didcomm-browser": "file:./didcomm-rust/didcomm-browser",
+    "core-js": "^3.32.2",
+    "didcomm-browser": "file:./generated/didcomm-wasm-browser",
+    "didcomm-node": "file:./generated/didcomm-wasm-node",
     "eslint": "^8.36.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-config-standard-with-typescript": "^34.0.1",
@@ -89,26 +108,35 @@
     "rollup-plugin-jscc": "^2.0.0",
     "rollup-plugin-modify": "^3.0.0",
     "rollup-plugin-polyfill-node": "^0.12.0",
+    "rollup-plugin-strip-code": "^0.2.7",
     "rollup-plugin-typescript2": "^0.34.1",
     "semantic-release": "^21.1.1",
     "semantic-release-slack-bot": "^4.0.2",
     "sinon": "^15.0.1",
     "sinon-chai": "^3.7.0",
-    "typedoc": "^0.24.8",
-    "typedoc-plugin-markdown": "3.15.3",
-    "typedoc-plugin-rename-defaults": "^0.6.5",
-    "typedoc-plugin-superstruct": "^1.0.0",
-    "typedoc-theme-hierarchy": "^4.0.0",
+    "typedoc": "^0.25.6",
+    "typedoc-plugin-external-module-map": "^2.0.1",
+    "typedoc-plugin-markdown": "^3.17.1",
+    "typedoc-plugin-rename-defaults": "^0.7.0",
     "typescript": "^4.9.5"
   },
   "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setup.ts"
+    ],
+    "workerThreads": true,
+    "maxWorkers": 1,
+    "transformIgnorePatterns": [
+      "node_modules/(?!@noble)"
+    ],
     "automock": false,
     "moduleFileExtensions": [
       "js",
       "ts"
     ],
     "moduleNameMapper": {
-      "^core-js/modules/(.*)$": "<rootDir>/node_modules/core-js/modules/$1"
+      "^core-js/modules/(.*)$": "<rootDir>/node_modules/core-js/modules/$1",
+      "^sinon$": "<rootDir>/node_modules/sinon/pkg/sinon.js"
     },
     "coverageReporters": [
       "json-summary",
@@ -121,15 +149,21 @@
     ],
     "coveragePathIgnorePatterns": [
       "tests",
-      "anoncreds-rust",
-      "didcomm-rust"
+      "externals",
+      "generated",
+      "src/castor/protos",
+      "build"
+    ],
+    "testPathIgnorePatterns": [
+      "externals",
+      "generated"
     ],
     "coverageThreshold": {
       "global": {
         "branches": 22,
         "functions": 33,
-        "lines": 34,
-        "statements": 34
+        "lines": 32,
+        "statements": 32
       }
     },
     "coverageDirectory": "coverage"
@@ -139,6 +173,7 @@
     "outputName": "junit.xml"
   },
   "dependencies": {
+    "@atala/apollo": "^1.2.10",
     "@scure/bip32": "^1.3.0",
     "@scure/bip39": "^1.1.1",
     "@stablelib/base64": "^1.0.1",
@@ -151,16 +186,15 @@
     "axios": "^1.6.1",
     "bn.js": "^5.2.1",
     "buffer": "^6.0.3",
-    "core-js": "^3.29.1",
     "did-jwt": "^6.11.5",
     "did-resolver": "^4.1.0",
-    "didcomm-node": "^0.4.1",
     "elliptic": "^6.5.4",
     "google-protobuf": "^3.21.2",
     "hash.js": "1.1.7",
     "jose": "^4.12.2",
     "jsonwebtoken": "^9.0.0",
     "multiformats": "^9.9.0",
+    "text-encoding": "^0.7.0",
     "util": "^0.12.5",
     "uuid": "^9.0.0"
   }

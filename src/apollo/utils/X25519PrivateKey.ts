@@ -1,47 +1,50 @@
-import * as x25519 from "@stablelib/x25519";
-import { base64url } from "multiformats/bases/base64";
-import { Curve, KeyTypes, PrivateKey } from "../../domain";
-import { KeyProperties } from "../../domain/models/KeyProperties";
+import ApolloPkg from "@atala/apollo";
 import { X25519PublicKey } from "./X25519PublicKey";
+import {
+  Curve,
+  ExportableKey,
+  ImportableKey,
+  KeyProperties,
+  KeyTypes,
+  PrivateKey
+} from "../../domain";
 
 /**
  * @ignore
  */
-export class X25519PrivateKey extends PrivateKey {
-  public static ec = x25519;
-  public type: KeyTypes = KeyTypes.Curve25519;
+export class X25519PrivateKey extends PrivateKey implements ExportableKey {
   public keySpecification: Map<string, string> = new Map();
+  public raw: Buffer;
   public size: number;
-  public raw: Uint8Array;
+  public type: KeyTypes = KeyTypes.EC;
 
-  constructor(private nativeValue: Uint8Array) {
+  public readonly to = ExportableKey.factory(this, { pemLabel: "PRIVATE KEY" });
+  static from = ImportableKey.factory(X25519PrivateKey, { pemLabel: "PRIVATE KEY" });
+
+  constructor(bytes: Int8Array | Uint8Array) {
     super();
-    this.raw = nativeValue;
+
+    this.raw = this.getInstance(bytes).raw;
     this.size = this.raw.length;
     this.keySpecification.set(KeyProperties.curve, Curve.X25519);
   }
 
   getEncoded(): Buffer {
-    return Buffer.from(base64url.baseEncode(this.nativeValue));
+    return this.getInstance().getEncoded();
   }
 
   publicKey(): X25519PublicKey {
-    const x25519PrivateKey = X25519PrivateKey.ec.generateKeyPairFromSeed(
-      Buffer.from(this.raw)
-    );
-    const pub = x25519PrivateKey.publicKey;
-    return new X25519PublicKey(Buffer.from(pub));
+    return new X25519PublicKey(this.getInstance().publicKey().raw);
   }
 
-  public readonly to = {
-    Buffer: () => this.getEncoded(),
-    Hex: () => this.to.Buffer().toString("hex"),
-  };
+  private getInstance(value?: Int8Array | Uint8Array) {
+    // eslint-disable-next-line no-extra-boolean-cast
+    const bytes = !!value ? Buffer.from(value) : this.raw;
+    const instance =
+      new ApolloPkg.io.iohk.atala.prism.apollo.utils.KMMX25519PrivateKey(
+        Int8Array.from(bytes)
+      );
 
-  static from = {
-    Buffer: (value: Buffer) => new X25519PrivateKey(new Uint8Array(value)),
-    Hex: (value: string) =>
-      X25519PrivateKey.from.Buffer(Buffer.from(value, "hex")),
-    String: (value: string) => X25519PrivateKey.from.Buffer(Buffer.from(value)),
-  };
+    return instance;
+  }
 }

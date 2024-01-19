@@ -9,7 +9,7 @@ export enum AnonCredsCredentialProperties {
   sub = "sub",
   credentialDefinitionId = "credentialDefinitionId",
   values = "values",
-  signasture = "signature",
+  signature = "signature",
   signatureCorrectnessProof = "signatureCorrectnessProof",
   exp = "exp",
 }
@@ -18,8 +18,7 @@ export const AnonCredsRecoveryId = "anonCreds+credential";
 
 export class AnonCredsCredential
   extends Credential
-  implements StorableCredential
-{
+  implements StorableCredential {
   public credentialType = CredentialType.AnonCreds;
   public recoveryId = AnonCredsRecoveryId;
   public properties = new Map<AnonCredsCredentialProperties, any>();
@@ -42,7 +41,7 @@ export class AnonCredsCredential
     );
     this.properties.set(AnonCredsCredentialProperties.values, values);
 
-    this.properties.set(AnonCredsCredentialProperties.signasture, signature);
+    this.properties.set(AnonCredsCredentialProperties.signature, signature);
     this.properties.set(
       AnonCredsCredentialProperties.signatureCorrectnessProof,
       signature_correctness_proof
@@ -58,12 +57,20 @@ export class AnonCredsCredential
     return [];
   }
 
-  get subject() {
-    return this.properties.get(AnonCredsCredentialProperties.sub);
+  get credentialDefinitionId(): string {
+    return this.getProperty(AnonCredsCredentialProperties.credentialDefinitionId);
   }
 
   get issuer() {
     return this.properties.get(AnonCredsCredentialProperties.iss);
+  }
+
+  get schemaId(): string {
+    return this.getProperty(AnonCredsCredentialProperties.schemaId);
+  }
+
+  get subject() {
+    return this.properties.get(AnonCredsCredentialProperties.sub);
   }
 
   toStorable() {
@@ -77,6 +84,16 @@ export class AnonCredsCredential
       subject,
       validUntil: this.getProperty(AnonCredsCredentialProperties.exp),
       availableClaims: claims,
+    };
+  }
+
+  toJSON(): Anoncreds.Credential {
+    return {
+      cred_def_id: this.credentialDefinitionId,
+      schema_id: this.schemaId,
+      signature: this.getProperty(AnonCredsCredentialProperties.signature),
+      signature_correctness_proof: this.getProperty(AnonCredsCredentialProperties.signatureCorrectnessProof),
+      values: this.getProperty(AnonCredsCredentialProperties.values),
     };
   }
 }
