@@ -1,4 +1,4 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / [Domain](../modules/Domain.md) / StorableKey
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / [Domain](../modules/Domain.md) / StorableKey
 
 # Class: StorableKey
 
@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[src/domain/models/keyManagement/StorableKey.ts:8](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/keyManagement/StorableKey.ts#L8)
+[src/domain/models/keyManagement/StorableKey.ts:8](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/keyManagement/StorableKey.ts#L8)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/keyManagement/StorableKey.ts:9](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/keyManagement/StorableKey.ts#L9)
+[src/domain/models/keyManagement/StorableKey.ts:9](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/keyManagement/StorableKey.ts#L9)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/keyManagement/StorableKey.ts:7](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/keyManagement/StorableKey.ts#L7)
+[src/domain/models/keyManagement/StorableKey.ts:7](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/keyManagement/StorableKey.ts#L7)
 
 ## Methods
 
@@ -72,4 +72,4 @@ ___
 
 #### Defined in
 
-[src/domain/models/keyManagement/StorableKey.ts:6](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/keyManagement/StorableKey.ts#L6)
+[src/domain/models/keyManagement/StorableKey.ts:6](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/keyManagement/StorableKey.ts#L6)

@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/compare/v4.0.0...v4.0.1) (2024-02-02)
+
+
+### Bug Fixes
+
+* Manually generating the missing changelog and breaking changes b… ([#167](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/issues/167)) ([6927a34](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/commit/6927a34a694250014f82231c5c78425d04110780))
+
 # [4.0.0](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/compare/v3.1.0...v4.0.0) (2024-02-02)
 
 * fix: removing terser to allow an unminified build that is easier to d… by @elribonazo in https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/pull/127

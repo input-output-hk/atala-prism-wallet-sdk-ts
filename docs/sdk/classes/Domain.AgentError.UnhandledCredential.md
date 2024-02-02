@@ -1,39 +1,39 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / [Domain](../modules/Domain.md) / [AgentError](../modules/Domain.AgentError.md) / InvalidBasicMEssageBodyError
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / [Domain](../modules/Domain.md) / [AgentError](../modules/Domain.AgentError.md) / UnhandledCredential
 
-# Class: InvalidBasicMEssageBodyError
+# Class: UnhandledCredential
 
-[Domain](../modules/Domain.md).[AgentError](../modules/Domain.AgentError.md).InvalidBasicMEssageBodyError
+[Domain](../modules/Domain.md).[AgentError](../modules/Domain.AgentError.md).UnhandledCredential
 
 ## Hierarchy
 
 - `Error`
 
-  ↳ **`InvalidBasicMEssageBodyError`**
+  ↳ **`UnhandledCredential`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](Domain.AgentError.InvalidBasicMEssageBodyError.md#constructor)
+- [constructor](Domain.AgentError.UnhandledCredential.md#constructor)
 
 ### Properties
 
-- [cause](Domain.AgentError.InvalidBasicMEssageBodyError.md#cause)
-- [message](Domain.AgentError.InvalidBasicMEssageBodyError.md#message)
-- [name](Domain.AgentError.InvalidBasicMEssageBodyError.md#name)
-- [stack](Domain.AgentError.InvalidBasicMEssageBodyError.md#stack)
-- [prepareStackTrace](Domain.AgentError.InvalidBasicMEssageBodyError.md#preparestacktrace)
-- [stackTraceLimit](Domain.AgentError.InvalidBasicMEssageBodyError.md#stacktracelimit)
+- [cause](Domain.AgentError.UnhandledCredential.md#cause)
+- [message](Domain.AgentError.UnhandledCredential.md#message)
+- [name](Domain.AgentError.UnhandledCredential.md#name)
+- [stack](Domain.AgentError.UnhandledCredential.md#stack)
+- [prepareStackTrace](Domain.AgentError.UnhandledCredential.md#preparestacktrace)
+- [stackTraceLimit](Domain.AgentError.UnhandledCredential.md#stacktracelimit)
 
 ### Methods
 
-- [captureStackTrace](Domain.AgentError.InvalidBasicMEssageBodyError.md#capturestacktrace)
+- [captureStackTrace](Domain.AgentError.UnhandledCredential.md#capturestacktrace)
 
 ## Constructors
 
 ### constructor
 
-• **new InvalidBasicMEssageBodyError**(`message?`): [`InvalidBasicMEssageBodyError`](Domain.AgentError.InvalidBasicMEssageBodyError.md)
+• **new UnhandledCredential**(`message?`): [`UnhandledCredential`](Domain.AgentError.UnhandledCredential.md)
 
 #### Parameters
 
@@ -43,15 +43,36 @@
 
 #### Returns
 
-[`InvalidBasicMEssageBodyError`](Domain.AgentError.InvalidBasicMEssageBodyError.md)
+[`UnhandledCredential`](Domain.AgentError.UnhandledCredential.md)
 
-#### Overrides
+#### Inherited from
 
 Error.constructor
 
 #### Defined in
 
-[src/domain/models/errors/Agent.ts:64](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/errors/Agent.ts#L64)
+node_modules/typescript/lib/lib.es5.d.ts:1059
+
+• **new UnhandledCredential**(`message?`, `options?`): [`UnhandledCredential`](Domain.AgentError.UnhandledCredential.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message?` | `string` |
+| `options?` | `ErrorOptions` |
+
+#### Returns
+
+[`UnhandledCredential`](Domain.AgentError.UnhandledCredential.md)
+
+#### Inherited from
+
+Error.constructor
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:1059
 
 ## Properties
 
@@ -148,7 +169,7 @@ Error.prepareStackTrace
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:11
+node_modules/@types/node/globals.d.ts:27
 
 ___
 
@@ -162,7 +183,7 @@ Error.stackTraceLimit
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:13
+node_modules/@types/node/globals.d.ts:29
 
 ## Methods
 
@@ -189,4 +210,4 @@ Error.captureStackTrace
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:4
+node_modules/@types/node/globals.d.ts:20

@@ -1,4 +1,4 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / ConnectionsManagerInterface
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / ConnectionsManagerInterface
 
 # Interface: ConnectionsManagerInterface
 
@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:109](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L109)
+[src/prism-agent/types/index.ts:109](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L109)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:103](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L103)
+[src/prism-agent/types/index.ts:103](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L103)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:106](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L106)
+[src/prism-agent/types/index.ts:106](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L106)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:104](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L104)
+[src/prism-agent/types/index.ts:104](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L104)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:107](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L107)
+[src/prism-agent/types/index.ts:107](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L107)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:105](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L105)
+[src/prism-agent/types/index.ts:105](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L105)
 
 ## Methods
 
@@ -106,13 +106,13 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:113](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L113)
+[src/prism-agent/types/index.ts:113](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L113)
 
 ___
 
 ### awaitMessageResponse
 
-▸ **awaitMessageResponse**(`id`): `Promise`\<`undefined` \| [`Message`](../classes/Domain.Message.md)\>
+▸ **awaitMessageResponse**(`id`): `Promise`\<`undefined` \| [`Message`](../classes/Domain.Message-1.md)\>
 
 #### Parameters
 
@@ -122,25 +122,25 @@ ___
 
 #### Returns
 
-`Promise`\<`undefined` \| [`Message`](../classes/Domain.Message.md)\>
+`Promise`\<`undefined` \| [`Message`](../classes/Domain.Message-1.md)\>
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:119](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L119)
+[src/prism-agent/types/index.ts:119](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L119)
 
 ___
 
 ### awaitMessages
 
-▸ **awaitMessages**(): `Promise`\<[`Message`](../classes/Domain.Message.md)[]\>
+▸ **awaitMessages**(): `Promise`\<[`Message`](../classes/Domain.Message-1.md)[]\>
 
 #### Returns
 
-`Promise`\<[`Message`](../classes/Domain.Message.md)[]\>
+`Promise`\<[`Message`](../classes/Domain.Message-1.md)[]\>
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:117](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L117)
+[src/prism-agent/types/index.ts:117](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L117)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:125](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L125)
+[src/prism-agent/types/index.ts:125](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L125)
 
 ___
 
@@ -180,27 +180,27 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:115](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L115)
+[src/prism-agent/types/index.ts:115](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L115)
 
 ___
 
 ### sendMessage
 
-▸ **sendMessage**(`message`): `Promise`\<`undefined` \| [`Message`](../classes/Domain.Message.md)\>
+▸ **sendMessage**(`message`): `Promise`\<`undefined` \| [`Message`](../classes/Domain.Message-1.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `message` | [`Message`](../classes/Domain.Message.md) |
+| `message` | [`Message`](../classes/Domain.Message-1.md) |
 
 #### Returns
 
-`Promise`\<`undefined` \| [`Message`](../classes/Domain.Message.md)\>
+`Promise`\<`undefined` \| [`Message`](../classes/Domain.Message-1.md)\>
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:121](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L121)
+[src/prism-agent/types/index.ts:121](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L121)
 
 ___
 
@@ -214,7 +214,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:123](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L123)
+[src/prism-agent/types/index.ts:123](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L123)
 
 ___
 
@@ -228,4 +228,4 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:111](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L111)
+[src/prism-agent/types/index.ts:111](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L111)

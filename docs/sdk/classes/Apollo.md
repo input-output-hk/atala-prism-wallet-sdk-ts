@@ -1,4 +1,4 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / Apollo
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / Apollo
 
 # Class: Apollo
 
@@ -114,7 +114,7 @@ export enum KeyProperties {
 
 #### Defined in
 
-[src/apollo/Apollo.ts:102](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/apollo/Apollo.ts#L102)
+[src/apollo/Apollo.ts:102](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/apollo/Apollo.ts#L102)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[src/apollo/Apollo.ts:101](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/apollo/Apollo.ts#L101)
+[src/apollo/Apollo.ts:101](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/apollo/Apollo.ts#L101)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[src/apollo/Apollo.ts:103](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/apollo/Apollo.ts#L103)
+[src/apollo/Apollo.ts:103](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/apollo/Apollo.ts#L103)
 
 ## Methods
 
@@ -211,7 +211,7 @@ Calling this function just generates a new random privateKey for that curve
 
 #### Defined in
 
-[src/apollo/Apollo.ts:236](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/apollo/Apollo.ts#L236)
+[src/apollo/Apollo.ts:236](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/apollo/Apollo.ts#L236)
 
 ___
 
@@ -239,7 +239,7 @@ This function creates a random mnemonic phrase whose usage is as a seed for gene
 
 #### Defined in
 
-[src/apollo/Apollo.ts:117](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/apollo/Apollo.ts#L117)
+[src/apollo/Apollo.ts:117](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/apollo/Apollo.ts#L117)
 
 ___
 
@@ -273,7 +273,7 @@ This function creates a random mnemonic phrase and seed.
 
 #### Defined in
 
-[src/apollo/Apollo.ts:168](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/apollo/Apollo.ts#L168)
+[src/apollo/Apollo.ts:168](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/apollo/Apollo.ts#L168)
 
 ___
 
@@ -308,4 +308,4 @@ This function takes mnemonics and passphrases and creates a seed object to gener
 
 #### Defined in
 
-[src/apollo/Apollo.ts:135](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/apollo/Apollo.ts#L135)
+[src/apollo/Apollo.ts:135](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/apollo/Apollo.ts#L135)

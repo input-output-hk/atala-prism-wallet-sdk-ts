@@ -1,4 +1,4 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / PeerDIDEncoded
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / PeerDIDEncoded
 
 # Interface: PeerDIDEncoded
 
@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/peer-did/PeerDID.ts:25](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/peer-did/PeerDID.ts#L25)
+[src/peer-did/PeerDID.ts:25](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/peer-did/PeerDID.ts#L25)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[src/peer-did/PeerDID.ts:24](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/peer-did/PeerDID.ts#L24)
+[src/peer-did/PeerDID.ts:24](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/peer-did/PeerDID.ts#L24)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[src/peer-did/PeerDID.ts:23](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/peer-did/PeerDID.ts#L23)
+[src/peer-did/PeerDID.ts:23](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/peer-did/PeerDID.ts#L23)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[src/peer-did/PeerDID.ts:22](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/peer-did/PeerDID.ts#L22)
+[src/peer-did/PeerDID.ts:22](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/peer-did/PeerDID.ts#L22)

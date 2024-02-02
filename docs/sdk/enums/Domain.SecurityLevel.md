@@ -1,4 +1,4 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / [Domain](../modules/Domain.md) / SecurityLevel
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / [Domain](../modules/Domain.md) / SecurityLevel
 
 # Enumeration: SecurityLevel
 
@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/domain/models/keyManagement/StorableKey.ts:2](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/keyManagement/StorableKey.ts#L2)
+[src/domain/models/keyManagement/StorableKey.ts:2](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/keyManagement/StorableKey.ts#L2)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[src/domain/models/keyManagement/StorableKey.ts:3](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/keyManagement/StorableKey.ts#L3)
+[src/domain/models/keyManagement/StorableKey.ts:3](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/keyManagement/StorableKey.ts#L3)

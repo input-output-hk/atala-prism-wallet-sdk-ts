@@ -1,4 +1,4 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / Agent
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / Agent
 
 # Class: Agent
 
@@ -89,7 +89,7 @@ Creates an instance of Agent.
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:81](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L81)
+[src/prism-agent/Agent.ts:81](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L81)
 
 ## Properties
 
@@ -99,7 +99,7 @@ Creates an instance of Agent.
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:62](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L62)
+[src/prism-agent/Agent.ts:62](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L62)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:63](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L63)
+[src/prism-agent/Agent.ts:63](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L63)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:64](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L64)
+[src/prism-agent/Agent.ts:64](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L64)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:89](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L89)
+[src/prism-agent/Agent.ts:89](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L89)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:82](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L82)
+[src/prism-agent/Agent.ts:82](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L82)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:83](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L83)
+[src/prism-agent/Agent.ts:83](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L83)
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:87](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L87)
+[src/prism-agent/Agent.ts:87](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L87)
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:86](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L86)
+[src/prism-agent/Agent.ts:86](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L86)
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:85](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L85)
+[src/prism-agent/Agent.ts:85](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L85)
 
 ___
 
@@ -189,7 +189,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:84](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L84)
+[src/prism-agent/Agent.ts:84](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L84)
 
 ___
 
@@ -199,7 +199,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:66](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L66)
+[src/prism-agent/Agent.ts:66](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L66)
 
 ___
 
@@ -209,7 +209,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:88](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L88)
+[src/prism-agent/Agent.ts:88](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L88)
 
 ___
 
@@ -221,7 +221,7 @@ Agent state
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:60](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L60)
+[src/prism-agent/Agent.ts:60](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L60)
 
 ## Accessors
 
@@ -237,7 +237,7 @@ Get current mediator DID if available or null
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:181](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L181)
+[src/prism-agent/Agent.ts:181](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L181)
 
 ## Methods
 
@@ -270,7 +270,7 @@ Asyncronously accept a didcomm v2 invitation, will create a pair between the Age
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:377](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L377)
+[src/prism-agent/Agent.ts:377](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L377)
 
 ___
 
@@ -298,7 +298,7 @@ Handle an invitation to create a connection
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:330](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L330)
+[src/prism-agent/Agent.ts:330](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L330)
 
 ___
 
@@ -321,7 +321,7 @@ Add an event listener to get notified from an Event "MESSAGE"
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:424](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L424)
+[src/prism-agent/Agent.ts:424](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L424)
 
 ___
 
@@ -350,7 +350,7 @@ Asyncronously Create a new PeerDID
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:302](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L302)
+[src/prism-agent/Agent.ts:302](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L302)
 
 ___
 
@@ -380,7 +380,7 @@ Asyncronously create a new PrismDID
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:282](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L282)
+[src/prism-agent/Agent.ts:282](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L282)
 
 ___
 
@@ -411,7 +411,7 @@ instance of the presentation which we can share with the verifier.
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:475](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L475)
+[src/prism-agent/Agent.ts:475](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L475)
 
 ___
 
@@ -439,7 +439,7 @@ Asyncronously parse an invitation from a valid json string
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:319](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L319)
+[src/prism-agent/Agent.ts:319](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L319)
 
 ___
 
@@ -467,7 +467,7 @@ Asyncronously parse an out of band invitation from a URI as the oob come in form
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:364](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L364)
+[src/prism-agent/Agent.ts:364](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L364)
 
 ___
 
@@ -495,7 +495,7 @@ Asyncronously parse a prismOnboarding invitation from a string
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:353](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L353)
+[src/prism-agent/Agent.ts:353](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L353)
 
 ___
 
@@ -523,7 +523,7 @@ Asyncronously prepare a request credential message from a valid offerCredential 
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:446](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L446)
+[src/prism-agent/Agent.ts:446](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L446)
 
 ___
 
@@ -551,7 +551,7 @@ Extract the verifiableCredential object from the Issue credential message asyncr
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:459](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L459)
+[src/prism-agent/Agent.ts:459](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L459)
 
 ___
 
@@ -578,13 +578,13 @@ Remove event listener, used by stop procedure
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:435](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L435)
+[src/prism-agent/Agent.ts:435](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L435)
 
 ___
 
 ### sendMessage
 
-▸ **sendMessage**(`message`): `Promise`\<`undefined` \| [`Message`](Domain.Message.md)\>
+▸ **sendMessage**(`message`): `Promise`\<`undefined` \| [`Message`](Domain.Message-1.md)\>
 
 Asyncronously send a didcomm Message
 
@@ -592,15 +592,15 @@ Asyncronously send a didcomm Message
 
 | Name | Type |
 | :------ | :------ |
-| `message` | [`Message`](Domain.Message.md) |
+| `message` | [`Message`](Domain.Message-1.md) |
 
 #### Returns
 
-`Promise`\<`undefined` \| [`Message`](Domain.Message.md)\>
+`Promise`\<`undefined` \| [`Message`](Domain.Message-1.md)\>
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:405](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L405)
+[src/prism-agent/Agent.ts:405](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L405)
 
 ___
 
@@ -629,7 +629,7 @@ Asyncronously sign a message with a DID
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:342](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L342)
+[src/prism-agent/Agent.ts:342](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L342)
 
 ___
 
@@ -647,7 +647,7 @@ Asyncronously start the agent
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:225](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L225)
+[src/prism-agent/Agent.ts:225](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L225)
 
 ___
 
@@ -669,7 +669,7 @@ Start fetching for new messages in such way that it can be stopped at any point 
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:388](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L388)
+[src/prism-agent/Agent.ts:388](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L388)
 
 ___
 
@@ -687,7 +687,7 @@ Asyncronously stop the agent and any side task that is running
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:263](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L263)
+[src/prism-agent/Agent.ts:263](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L263)
 
 ___
 
@@ -703,7 +703,7 @@ Stops fetching messages
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:395](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L395)
+[src/prism-agent/Agent.ts:395](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L395)
 
 ___
 
@@ -723,7 +723,7 @@ Asyncronously get all verifiable credentials
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:414](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L414)
+[src/prism-agent/Agent.ts:414](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L414)
 
 ___
 
@@ -753,7 +753,7 @@ allowing default instantiation, omitting all but the absolute necessary paramete
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:136](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L136)
+[src/prism-agent/Agent.ts:136](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L136)
 
 ___
 
@@ -783,4 +783,4 @@ Mainly for testing purposes but instantiating the Agent from a ConnectionManager
 
 #### Defined in
 
-[src/prism-agent/Agent.ts:198](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/Agent.ts#L198)
+[src/prism-agent/Agent.ts:198](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/Agent.ts#L198)

@@ -1,4 +1,4 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / [Domain](../modules/Domain.md) / PrismDIDInfo
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / [Domain](../modules/Domain.md) / PrismDIDInfo
 
 # Class: PrismDIDInfo
 
@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[src/domain/models/PrismDIDInfo.ts:4](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/PrismDIDInfo.ts#L4)
+[src/domain/models/PrismDIDInfo.ts:4](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/PrismDIDInfo.ts#L4)
 
 ## Properties
 
@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[src/domain/models/PrismDIDInfo.ts:7](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/PrismDIDInfo.ts#L7)
+[src/domain/models/PrismDIDInfo.ts:7](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/PrismDIDInfo.ts#L7)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/PrismDIDInfo.ts:5](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/PrismDIDInfo.ts#L5)
+[src/domain/models/PrismDIDInfo.ts:5](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/PrismDIDInfo.ts#L5)
 
 ___
 
@@ -66,4 +66,4 @@ ___
 
 #### Defined in
 
-[src/domain/models/PrismDIDInfo.ts:6](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/PrismDIDInfo.ts#L6)
+[src/domain/models/PrismDIDInfo.ts:6](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/PrismDIDInfo.ts#L6)
