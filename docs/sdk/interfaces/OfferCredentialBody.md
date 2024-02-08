@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[src/prism-agent/protocols/types.ts:7](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/types.ts#L7)
+[src/prism-agent/protocols/types.ts:7](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/types.ts#L7)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/protocols/types.ts:20](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/types.ts#L20)
+[src/prism-agent/protocols/types.ts:20](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/types.ts#L20)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/protocols/types.ts:5](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/types.ts#L5)
+[src/prism-agent/protocols/types.ts:5](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/types.ts#L5)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/protocols/types.ts:6](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/types.ts#L6)
+[src/prism-agent/protocols/types.ts:6](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/types.ts#L6)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/protocols/types.ts:22](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/types.ts#L22)
+[src/prism-agent/protocols/types.ts:22](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/types.ts#L22)
 
 ___
 
@@ -89,4 +89,4 @@ ___
 
 #### Defined in
 
-[src/prism-agent/protocols/types.ts:21](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/types.ts#L21)
+[src/prism-agent/protocols/types.ts:21](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/types.ts#L21)

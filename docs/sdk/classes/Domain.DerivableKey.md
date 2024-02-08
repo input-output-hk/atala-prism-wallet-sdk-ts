@@ -42,4 +42,4 @@
 
 #### Defined in
 
-[src/domain/models/keyManagement/DerivableKey.ts:5](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/keyManagement/DerivableKey.ts#L5)
+[src/domain/models/keyManagement/DerivableKey.ts:5](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/keyManagement/DerivableKey.ts#L5)

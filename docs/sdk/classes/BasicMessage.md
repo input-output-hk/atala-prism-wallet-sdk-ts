@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[src/prism-agent/protocols/other/BasicMessage.ts:10](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/other/BasicMessage.ts#L10)
+[src/prism-agent/protocols/other/BasicMessage.ts:10](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/other/BasicMessage.ts#L10)
 
 ## Properties
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[src/prism-agent/protocols/other/BasicMessage.ts:11](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/other/BasicMessage.ts#L11)
+[src/prism-agent/protocols/other/BasicMessage.ts:11](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/other/BasicMessage.ts#L11)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/protocols/other/BasicMessage.ts:12](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/other/BasicMessage.ts#L12)
+[src/prism-agent/protocols/other/BasicMessage.ts:12](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/other/BasicMessage.ts#L12)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/protocols/other/BasicMessage.ts:13](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/other/BasicMessage.ts#L13)
+[src/prism-agent/protocols/other/BasicMessage.ts:13](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/other/BasicMessage.ts#L13)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/protocols/other/BasicMessage.ts:8](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/other/BasicMessage.ts#L8)
+[src/prism-agent/protocols/other/BasicMessage.ts:8](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/other/BasicMessage.ts#L8)
 
 ## Methods
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/protocols/other/BasicMessage.ts:16](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/other/BasicMessage.ts#L16)
+[src/prism-agent/protocols/other/BasicMessage.ts:16](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/other/BasicMessage.ts#L16)
 
 ___
 
@@ -114,4 +114,4 @@ ___
 
 #### Defined in
 
-[src/prism-agent/protocols/other/BasicMessage.ts:21](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/other/BasicMessage.ts#L21)
+[src/prism-agent/protocols/other/BasicMessage.ts:21](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/other/BasicMessage.ts#L21)

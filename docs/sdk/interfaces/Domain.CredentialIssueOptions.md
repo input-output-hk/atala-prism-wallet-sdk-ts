@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[src/domain/models/Credential.ts:63](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/Credential.ts#L63)
+[src/domain/models/Credential.ts:63](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/Credential.ts#L63)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/Credential.ts:62](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/Credential.ts#L62)
+[src/domain/models/Credential.ts:62](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/Credential.ts#L62)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[src/domain/models/Credential.ts:61](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/Credential.ts#L61)
+[src/domain/models/Credential.ts:61](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/Credential.ts#L61)

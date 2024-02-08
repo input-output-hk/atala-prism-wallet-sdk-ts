@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[src/domain/models/MessageAttachment.ts:4](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/MessageAttachment.ts#L4)
+[src/domain/models/MessageAttachment.ts:4](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/MessageAttachment.ts#L4)

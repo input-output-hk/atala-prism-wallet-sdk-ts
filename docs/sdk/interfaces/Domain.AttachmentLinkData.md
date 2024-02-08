@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/domain/models/MessageAttachment.ts:24](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/MessageAttachment.ts#L24)
+[src/domain/models/MessageAttachment.ts:24](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/MessageAttachment.ts#L24)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[src/domain/models/MessageAttachment.ts:23](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/MessageAttachment.ts#L23)
+[src/domain/models/MessageAttachment.ts:23](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/MessageAttachment.ts#L23)

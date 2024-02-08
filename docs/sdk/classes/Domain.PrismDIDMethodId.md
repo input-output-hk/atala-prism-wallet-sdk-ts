@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[src/domain/models/PrismDIDMethodId.ts:6](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/PrismDIDMethodId.ts#L6)
+[src/domain/models/PrismDIDMethodId.ts:6](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/PrismDIDMethodId.ts#L6)
 
 ## Properties
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[src/domain/models/PrismDIDMethodId.ts:4](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/PrismDIDMethodId.ts#L4)
+[src/domain/models/PrismDIDMethodId.ts:4](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/PrismDIDMethodId.ts#L4)
 
 ## Accessors
 
@@ -64,7 +64,7 @@
 
 #### Defined in
 
-[src/domain/models/PrismDIDMethodId.ts:22](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/PrismDIDMethodId.ts#L22)
+[src/domain/models/PrismDIDMethodId.ts:22](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/PrismDIDMethodId.ts#L22)
 
 ## Methods
 
@@ -78,4 +78,4 @@
 
 #### Defined in
 
-[src/domain/models/PrismDIDMethodId.ts:26](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/PrismDIDMethodId.ts#L26)
+[src/domain/models/PrismDIDMethodId.ts:26](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/PrismDIDMethodId.ts#L26)

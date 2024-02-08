@@ -51,7 +51,7 @@ Error.constructor
 
 #### Defined in
 
-[src/domain/models/errors/Mercury.ts:52](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/errors/Mercury.ts#L52)
+[src/domain/models/errors/Mercury.ts:52](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/errors/Mercury.ts#L52)
 
 ## Properties
 

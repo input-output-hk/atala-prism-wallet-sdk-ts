@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[src/prism-agent/protocols/types.ts:56](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/types.ts#L56)
+[src/prism-agent/protocols/types.ts:56](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/types.ts#L56)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/protocols/types.ts:55](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/types.ts#L55)
+[src/prism-agent/protocols/types.ts:55](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/types.ts#L55)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[src/prism-agent/protocols/types.ts:54](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/types.ts#L54)
+[src/prism-agent/protocols/types.ts:54](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/types.ts#L54)

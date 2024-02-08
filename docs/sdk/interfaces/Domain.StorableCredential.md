@@ -41,4 +41,4 @@
 
 #### Defined in
 
-[src/domain/models/Credential.ts:37](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/Credential.ts#L37)
+[src/domain/models/Credential.ts:37](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/Credential.ts#L37)

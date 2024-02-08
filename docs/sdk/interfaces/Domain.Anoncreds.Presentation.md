@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[src/domain/models/Anoncreds.ts:130](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/Anoncreds.ts#L130)
+[src/domain/models/Anoncreds.ts:130](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/Anoncreds.ts#L130)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/Anoncreds.ts:116](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/Anoncreds.ts#L116)
+[src/domain/models/Anoncreds.ts:116](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/Anoncreds.ts#L116)
 
 ___
 
@@ -58,4 +58,4 @@ ___
 
 #### Defined in
 
-[src/domain/models/Anoncreds.ts:123](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/Anoncreds.ts#L123)
+[src/domain/models/Anoncreds.ts:123](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/Anoncreds.ts#L123)

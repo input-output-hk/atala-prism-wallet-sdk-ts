@@ -1,6 +1,6 @@
 {
   "name": "@atala/prism-wallet-sdk",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "PRISM typescript SDK",
   "main": "./index.cjs",
   "module": "./index.mjs",

@@ -52,7 +52,7 @@ Error.constructor
 
 #### Defined in
 
-[src/domain/models/errors/Apollo.ts:44](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/errors/Apollo.ts#L44)
+[src/domain/models/errors/Apollo.ts:44](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/errors/Apollo.ts#L44)
 
 ## Properties
 

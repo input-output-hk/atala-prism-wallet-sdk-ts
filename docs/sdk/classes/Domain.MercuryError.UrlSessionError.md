@@ -55,7 +55,7 @@ Error.constructor
 
 #### Defined in
 
-[src/domain/models/errors/Mercury.ts:79](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/errors/Mercury.ts#L79)
+[src/domain/models/errors/Mercury.ts:79](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/errors/Mercury.ts#L79)
 
 ## Properties
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/errors/Mercury.ts:77](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/errors/Mercury.ts#L77)
+[src/domain/models/errors/Mercury.ts:77](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/errors/Mercury.ts#L77)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/errors/Mercury.ts:76](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/errors/Mercury.ts#L76)
+[src/domain/models/errors/Mercury.ts:76](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/errors/Mercury.ts#L76)
 
 ___
 

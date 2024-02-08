@@ -43,4 +43,4 @@
 
 #### Defined in
 
-[src/domain/models/keyManagement/VerifiableKey.ts:2](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/keyManagement/VerifiableKey.ts#L2)
+[src/domain/models/keyManagement/VerifiableKey.ts:2](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/keyManagement/VerifiableKey.ts#L2)

@@ -48,7 +48,7 @@ handle Credential related tasks
 
 #### Defined in
 
-[src/domain/buildingBlocks/Pollux.ts:18](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/buildingBlocks/Pollux.ts#L18)
+[src/domain/buildingBlocks/Pollux.ts:18](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/buildingBlocks/Pollux.ts#L18)
 
 ## Methods
 
@@ -76,7 +76,7 @@ dependent on the CredentialType
 
 #### Defined in
 
-[src/domain/buildingBlocks/Pollux.ts:42](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/buildingBlocks/Pollux.ts#L42)
+[src/domain/buildingBlocks/Pollux.ts:42](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/buildingBlocks/Pollux.ts#L42)
 
 ▸ **createPresentationProof**(`presentationRequest`, `credential`, `options`): `Promise`\<`string`\>
 
@@ -94,7 +94,7 @@ dependent on the CredentialType
 
 #### Defined in
 
-[src/domain/buildingBlocks/Pollux.ts:43](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/buildingBlocks/Pollux.ts#L43)
+[src/domain/buildingBlocks/Pollux.ts:43](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/buildingBlocks/Pollux.ts#L43)
 
 ▸ **createPresentationProof**(`presentationRequest`, `credential`, `options?`): `Promise`\<`any`\>
 
@@ -112,7 +112,7 @@ dependent on the CredentialType
 
 #### Defined in
 
-[src/domain/buildingBlocks/Pollux.ts:44](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/buildingBlocks/Pollux.ts#L44)
+[src/domain/buildingBlocks/Pollux.ts:44](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/buildingBlocks/Pollux.ts#L44)
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[src/domain/buildingBlocks/Pollux.ts:30](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/buildingBlocks/Pollux.ts#L30)
+[src/domain/buildingBlocks/Pollux.ts:30](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/buildingBlocks/Pollux.ts#L30)
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 #### Defined in
 
-[src/domain/buildingBlocks/Pollux.ts:26](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/buildingBlocks/Pollux.ts#L26)
+[src/domain/buildingBlocks/Pollux.ts:26](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/buildingBlocks/Pollux.ts#L26)
 
 ___
 
@@ -174,4 +174,4 @@ ___
 
 #### Defined in
 
-[src/domain/buildingBlocks/Pollux.ts:22](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/buildingBlocks/Pollux.ts#L22)
+[src/domain/buildingBlocks/Pollux.ts:22](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/buildingBlocks/Pollux.ts#L22)

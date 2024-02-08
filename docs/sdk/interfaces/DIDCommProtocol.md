@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[src/mercury/DIDCommProtocol.ts:4](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/DIDCommProtocol.ts#L4)
+[src/mercury/DIDCommProtocol.ts:4](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/DIDCommProtocol.ts#L4)
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 #### Defined in
 
-[src/mercury/DIDCommProtocol.ts:14](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/DIDCommProtocol.ts#L14)
+[src/mercury/DIDCommProtocol.ts:14](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/DIDCommProtocol.ts#L14)

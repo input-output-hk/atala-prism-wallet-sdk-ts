@@ -63,7 +63,7 @@
 
 #### Defined in
 
-[src/pollux/models/AnonCredsVerifiableCredential.ts:26](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/pollux/models/AnonCredsVerifiableCredential.ts#L26)
+[src/pollux/models/AnonCredsVerifiableCredential.ts:26](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/pollux/models/AnonCredsVerifiableCredential.ts#L26)
 
 ## Properties
 
@@ -73,7 +73,7 @@
 
 #### Defined in
 
-[src/pollux/models/AnonCredsVerifiableCredential.ts:22](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/pollux/models/AnonCredsVerifiableCredential.ts#L22)
+[src/pollux/models/AnonCredsVerifiableCredential.ts:22](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/pollux/models/AnonCredsVerifiableCredential.ts#L22)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[src/pollux/models/AnonCredsVerifiableCredential.ts:24](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/pollux/models/AnonCredsVerifiableCredential.ts#L24)
+[src/pollux/models/AnonCredsVerifiableCredential.ts:24](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/pollux/models/AnonCredsVerifiableCredential.ts#L24)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/pollux/models/AnonCredsVerifiableCredential.ts:23](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/pollux/models/AnonCredsVerifiableCredential.ts#L23)
+[src/pollux/models/AnonCredsVerifiableCredential.ts:23](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/pollux/models/AnonCredsVerifiableCredential.ts#L23)
 
 ## Accessors
 
@@ -119,7 +119,7 @@ Credential.claims
 
 #### Defined in
 
-[src/pollux/models/AnonCredsVerifiableCredential.ts:55](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/pollux/models/AnonCredsVerifiableCredential.ts#L55)
+[src/pollux/models/AnonCredsVerifiableCredential.ts:55](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/pollux/models/AnonCredsVerifiableCredential.ts#L55)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[src/pollux/models/AnonCredsVerifiableCredential.ts:60](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/pollux/models/AnonCredsVerifiableCredential.ts#L60)
+[src/pollux/models/AnonCredsVerifiableCredential.ts:60](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/pollux/models/AnonCredsVerifiableCredential.ts#L60)
 
 ___
 
@@ -151,7 +151,7 @@ Credential.id
 
 #### Defined in
 
-[src/pollux/models/AnonCredsVerifiableCredential.ts:51](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/pollux/models/AnonCredsVerifiableCredential.ts#L51)
+[src/pollux/models/AnonCredsVerifiableCredential.ts:51](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/pollux/models/AnonCredsVerifiableCredential.ts#L51)
 
 ___
 
@@ -169,7 +169,7 @@ Credential.issuer
 
 #### Defined in
 
-[src/pollux/models/AnonCredsVerifiableCredential.ts:64](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/pollux/models/AnonCredsVerifiableCredential.ts#L64)
+[src/pollux/models/AnonCredsVerifiableCredential.ts:64](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/pollux/models/AnonCredsVerifiableCredential.ts#L64)
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 #### Defined in
 
-[src/pollux/models/AnonCredsVerifiableCredential.ts:68](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/pollux/models/AnonCredsVerifiableCredential.ts#L68)
+[src/pollux/models/AnonCredsVerifiableCredential.ts:68](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/pollux/models/AnonCredsVerifiableCredential.ts#L68)
 
 ___
 
@@ -201,7 +201,7 @@ Credential.subject
 
 #### Defined in
 
-[src/pollux/models/AnonCredsVerifiableCredential.ts:72](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/pollux/models/AnonCredsVerifiableCredential.ts#L72)
+[src/pollux/models/AnonCredsVerifiableCredential.ts:72](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/pollux/models/AnonCredsVerifiableCredential.ts#L72)
 
 ## Methods
 
@@ -225,7 +225,7 @@ Credential.subject
 
 #### Defined in
 
-[src/domain/models/Credential.ts:19](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/Credential.ts#L19)
+[src/domain/models/Credential.ts:19](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/Credential.ts#L19)
 
 ___
 
@@ -243,7 +243,7 @@ this is ProvableCredential
 
 #### Defined in
 
-[src/domain/models/Credential.ts:23](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/Credential.ts#L23)
+[src/domain/models/Credential.ts:23](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/Credential.ts#L23)
 
 ___
 
@@ -261,7 +261,7 @@ this is StorableCredential
 
 #### Defined in
 
-[src/domain/models/Credential.ts:27](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/Credential.ts#L27)
+[src/domain/models/Credential.ts:27](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/Credential.ts#L27)
 
 ___
 
@@ -275,7 +275,7 @@ ___
 
 #### Defined in
 
-[src/pollux/models/AnonCredsVerifiableCredential.ts:90](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/pollux/models/AnonCredsVerifiableCredential.ts#L90)
+[src/pollux/models/AnonCredsVerifiableCredential.ts:90](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/pollux/models/AnonCredsVerifiableCredential.ts#L90)
 
 ___
 
@@ -303,4 +303,4 @@ ___
 
 #### Defined in
 
-[src/pollux/models/AnonCredsVerifiableCredential.ts:76](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/pollux/models/AnonCredsVerifiableCredential.ts#L76)
+[src/pollux/models/AnonCredsVerifiableCredential.ts:76](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/pollux/models/AnonCredsVerifiableCredential.ts#L76)

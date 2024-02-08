@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[src/peer-did/PeerDID.ts:29](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/peer-did/PeerDID.ts#L29)
+[src/peer-did/PeerDID.ts:29](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/peer-did/PeerDID.ts#L29)
 
 ## Properties
 
@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[src/peer-did/PeerDID.ts:30](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/peer-did/PeerDID.ts#L30)
+[src/peer-did/PeerDID.ts:30](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/peer-did/PeerDID.ts#L30)
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 #### Defined in
 
-[src/peer-did/PeerDID.ts:31](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/peer-did/PeerDID.ts#L31)
+[src/peer-did/PeerDID.ts:31](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/peer-did/PeerDID.ts#L31)

@@ -1,3 +1,10 @@
+## [4.0.2](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/compare/v4.0.1...v4.0.2) (2024-02-08)
+
+
+### Bug Fixes
+
+* Recover JTI field correctly. Allowing to regenerate the original JWT string ([#171](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/issues/171)) ([686318e](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/commit/686318e2326e2716cd536b1a696c5e8c6ccc49e6))
+
 ## [4.0.1](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/compare/v4.0.0...v4.0.1) (2024-02-02)
 
 

@@ -60,7 +60,7 @@ Creates an instance of Mercury.
 
 #### Defined in
 
-[src/mercury/Mercury.ts:29](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/Mercury.ts#L29)
+[src/mercury/Mercury.ts:29](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/Mercury.ts#L29)
 
 ## Properties
 
@@ -70,7 +70,7 @@ Creates an instance of Mercury.
 
 #### Defined in
 
-[src/mercury/Mercury.ts:32](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/Mercury.ts#L32)
+[src/mercury/Mercury.ts:32](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/Mercury.ts#L32)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[src/mercury/Mercury.ts:30](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/Mercury.ts#L30)
+[src/mercury/Mercury.ts:30](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/Mercury.ts#L30)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[src/mercury/Mercury.ts:31](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/Mercury.ts#L31)
+[src/mercury/Mercury.ts:31](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/Mercury.ts#L31)
 
 ## Methods
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[src/mercury/Mercury.ts:170](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/Mercury.ts#L170)
+[src/mercury/Mercury.ts:170](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/Mercury.ts#L170)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[src/mercury/Mercury.ts:161](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/Mercury.ts#L161)
+[src/mercury/Mercury.ts:161](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/Mercury.ts#L161)
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 #### Defined in
 
-[src/mercury/Mercury.ts:101](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/Mercury.ts#L101)
+[src/mercury/Mercury.ts:101](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/Mercury.ts#L101)
 
 ___
 
@@ -177,7 +177,7 @@ did is undefined
 
 #### Defined in
 
-[src/mercury/Mercury.ts:138](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/Mercury.ts#L138)
+[src/mercury/Mercury.ts:138](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/Mercury.ts#L138)
 
 ___
 
@@ -204,7 +204,7 @@ message object is invalid.
 
 #### Defined in
 
-[src/mercury/Mercury.ts:42](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/Mercury.ts#L42)
+[src/mercury/Mercury.ts:42](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/Mercury.ts#L42)
 
 ___
 
@@ -226,7 +226,7 @@ ___
 
 #### Defined in
 
-[src/mercury/Mercury.ts:142](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/Mercury.ts#L142)
+[src/mercury/Mercury.ts:142](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/Mercury.ts#L142)
 
 ___
 
@@ -246,7 +246,7 @@ ___
 
 #### Defined in
 
-[src/mercury/Mercury.ts:183](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/Mercury.ts#L183)
+[src/mercury/Mercury.ts:183](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/Mercury.ts#L183)
 
 ___
 
@@ -280,7 +280,7 @@ Asynchronously sends a given message and returns the response data.
 
 #### Defined in
 
-[src/mercury/Mercury.ts:70](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/Mercury.ts#L70)
+[src/mercury/Mercury.ts:70](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/Mercury.ts#L70)
 
 ___
 
@@ -308,7 +308,7 @@ Asynchronously sends a given message and returns the response message object.
 
 #### Defined in
 
-[src/mercury/Mercury.ts:130](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/Mercury.ts#L130)
+[src/mercury/Mercury.ts:130](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/Mercury.ts#L130)
 
 ___
 
@@ -335,4 +335,4 @@ function may throw an error if the string is not a valid message representation.
 
 #### Defined in
 
-[src/mercury/Mercury.ts:58](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/mercury/Mercury.ts#L58)
+[src/mercury/Mercury.ts:58](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/mercury/Mercury.ts#L58)

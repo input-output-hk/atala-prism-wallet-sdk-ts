@@ -47,4 +47,4 @@ object with importable functions
 
 #### Defined in
 
-[src/domain/models/keyManagement/exportable/ExportableKey.ts:76](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/keyManagement/exportable/ExportableKey.ts#L76)
+[src/domain/models/keyManagement/exportable/ExportableKey.ts:76](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/keyManagement/exportable/ExportableKey.ts#L76)

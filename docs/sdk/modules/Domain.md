@@ -117,7 +117,7 @@
 
 #### Defined in
 
-[src/domain/models/MessageAttachment.ts:31](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/MessageAttachment.ts#L31)
+[src/domain/models/MessageAttachment.ts:31](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/MessageAttachment.ts#L31)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/DIDDocument.ts:99](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/DIDDocument.ts#L99)
+[src/domain/models/DIDDocument.ts:99](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/DIDDocument.ts#L99)
 
 ___
 
@@ -140,9 +140,9 @@ Default is all
 
 #### Defined in
 
-[src/domain/models/keyManagement/exportable/ExportableKey.ts:11](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/keyManagement/exportable/ExportableKey.ts#L11)
+[src/domain/models/keyManagement/exportable/ExportableKey.ts:11](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/keyManagement/exportable/ExportableKey.ts#L11)
 
-[src/domain/models/keyManagement/exportable/ExportableKey.ts:23](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/keyManagement/exportable/ExportableKey.ts#L23)
+[src/domain/models/keyManagement/exportable/ExportableKey.ts:23](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/keyManagement/exportable/ExportableKey.ts#L23)
 
 ___
 
@@ -154,9 +154,9 @@ JWK
 
 #### Defined in
 
-[src/domain/models/keyManagement/exportable/JWK.ts:7](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/keyManagement/exportable/JWK.ts#L7)
+[src/domain/models/keyManagement/exportable/JWK.ts:7](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/keyManagement/exportable/JWK.ts#L7)
 
-[src/domain/models/keyManagement/exportable/JWK.ts:13](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/keyManagement/exportable/JWK.ts#L13)
+[src/domain/models/keyManagement/exportable/JWK.ts:13](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/keyManagement/exportable/JWK.ts#L13)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/index.ts:24](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/index.ts#L24)
+[src/domain/models/index.ts:24](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/index.ts#L24)
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/WordList.ts:1](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/WordList.ts#L1)
+[src/domain/models/WordList.ts:1](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/WordList.ts#L1)
 
 ## Variables
 
@@ -186,7 +186,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/DefaultLinkSecretName.ts:1](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/DefaultLinkSecretName.ts#L1)
+[src/domain/models/DefaultLinkSecretName.ts:1](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/DefaultLinkSecretName.ts#L1)
 
 ## Functions
 
@@ -207,4 +207,4 @@ ___
 
 #### Defined in
 
-[src/domain/models/keyManagement/Key.ts:12](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/domain/models/keyManagement/Key.ts#L12)
+[src/domain/models/keyManagement/Key.ts:12](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/domain/models/keyManagement/Key.ts#L12)

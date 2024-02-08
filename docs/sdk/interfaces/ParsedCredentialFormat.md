@@ -22,4 +22,4 @@
 
 #### Defined in
 
-[src/prism-agent/protocols/types.ts:29](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/protocols/types.ts#L29)
+[src/prism-agent/protocols/types.ts:29](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/protocols/types.ts#L29)

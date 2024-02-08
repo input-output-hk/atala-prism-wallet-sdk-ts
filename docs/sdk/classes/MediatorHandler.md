@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:137](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L137)
+[src/prism-agent/types/index.ts:137](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/types/index.ts#L137)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:135](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L135)
+[src/prism-agent/types/index.ts:135](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/types/index.ts#L135)
 
 ## Methods
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:141](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L141)
+[src/prism-agent/types/index.ts:141](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/types/index.ts#L141)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:139](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L139)
+[src/prism-agent/types/index.ts:139](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/types/index.ts#L139)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:145](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L145)
+[src/prism-agent/types/index.ts:145](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/types/index.ts#L145)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:149](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L149)
+[src/prism-agent/types/index.ts:149](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/types/index.ts#L149)
 
 ___
 
@@ -147,4 +147,4 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:143](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/6927a34/src/prism-agent/types/index.ts#L143)
+[src/prism-agent/types/index.ts:143](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/686318e/src/prism-agent/types/index.ts#L143)
