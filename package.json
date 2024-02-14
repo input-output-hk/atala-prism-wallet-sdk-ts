@@ -173,6 +173,10 @@
     "outputName": "junit.xml"
   },
   "dependencies": {
+    "rxdb": "^14.17.0",
+    "rxjs": "7.8.1",
+    "@noble/ciphers": "^0.4.1",
+    "@noble/hashes": "^1.3.3",
     "@atala/apollo": "^1.2.10",
     "@scure/bip32": "^1.3.0",
     "@scure/bip39": "^1.1.1",
