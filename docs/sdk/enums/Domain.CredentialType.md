@@ -1,4 +1,4 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / [Domain](../modules/Domain.md) / CredentialType
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / [Domain](../modules/Domain.md) / CredentialType
 
 # Enumeration: CredentialType
 
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/domain/models/VerifiableCredential.ts:4](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/VerifiableCredential.ts#L4)
+[src/domain/models/VerifiableCredential.ts:4](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/domain/models/VerifiableCredential.ts#L4)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/VerifiableCredential.ts:2](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/VerifiableCredential.ts#L2)
+[src/domain/models/VerifiableCredential.ts:2](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/domain/models/VerifiableCredential.ts#L2)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/VerifiableCredential.ts:5](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/VerifiableCredential.ts#L5)
+[src/domain/models/VerifiableCredential.ts:5](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/domain/models/VerifiableCredential.ts#L5)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[src/domain/models/VerifiableCredential.ts:3](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/VerifiableCredential.ts#L3)
+[src/domain/models/VerifiableCredential.ts:3](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/domain/models/VerifiableCredential.ts#L3)

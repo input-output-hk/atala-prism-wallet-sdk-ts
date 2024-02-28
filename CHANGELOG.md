@@ -1,3 +1,42 @@
+# [5.0.0](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/compare/v4.0.0...v5.0.0) (2024-02-28)
+
+
+### Bug Fixes
+
+* add reference app + mediator live mode ([#177](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/issues/177)) ([6ebf48a](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/commit/6ebf48a637c0990cf53c7ca5197fa15b1553a07c))
+* e2e tests improvement ([#178](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/issues/178)) ([eb6a5ab](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/commit/eb6a5ab7c6ca45481f9743480bf840a59889ff13))
+* key's id name according to the DID Peer new specs [#126](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/issues/126) ([#148](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/issues/148)) ([a851b69](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/commit/a851b696eab02a8cc47f1affca03ad9b178082d9))
+* Manually generating the missing changelog and breaking changes b… ([#167](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/issues/167)) ([24ecc04](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/commit/24ecc040b5d42a77fc591c01fe3fdbe54d89bb6f))
+* Recover JTI field correctly. Allowing to regenerate the original JWT string ([#171](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/issues/171)) ([913f3fa](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/commit/913f3fa96fe003f21a4a22eeac989d5fa004dba9))
+
+
+* feat!: Implementing Pluto Repositories (#160) ([ce7669f](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/commit/ce7669ffb09be4cefe257fc592f36451e748d443)), closes [#160](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/issues/160)
+
+
+### BREAKING CHANGES
+
+* - Domain.Credential now has uuid (string) as an optional attribute in the class
+- Change StorePrismDID Function parameters, removing keyPathIndex and privateKeyMetadataId which were not in use
+- Small change in the getCredentialMetadata and getLinkSecret to return null when not found
+- Change Pluto interface to use CredentialMetadata class VS what it was using before.
+- Change Pluto interface, storeMediator now accepts a Mediator class and not 3 attributes, mediator, host and routing
+- Rename storePrivateKeys to storePrivateKey
+- Change Pluto interface, using Domain.PrismDID instead of Domain.PrismDID which is being removed
+- Added new properties to handle Anoncreds credentials properties.
+- Re-implemented Pluto which is now available again to all the users.
+
+import SDK from "@atala/prism-wallet-sdk";
+import IndexDB from "@pluto-encrypted/indexdb";
+
+const store = new SDK.Store({
+name: "test",
+storage: IndexDB,
+password: Buffer.from("demoapp").toString("hex")
+});
+const pluto = new SDK.Pluto(store, apollo);
+
+Migrations, schemas, queries and error handling have been moved to the SDK again but user's which were using the existing storages can just pass the indexDB pluto-encrypted storage and it will integrate with the new db schemas, migrations, etc
+
 # [4.0.0](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/compare/v3.1.0...v4.0.0) (2024-02-02)
 
 * fix: removing terser to allow an unminified build that is easier to d… by @elribonazo in https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/pull/127

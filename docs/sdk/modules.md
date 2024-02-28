@@ -1,6 +1,6 @@
-[@input-output-hk/atala-prism-wallet-sdk](README.md) / Exports
+[@atala/prism-wallet-sdk](README.md) / Exports
 
-# @input-output-hk/atala-prism-wallet-sdk
+# @atala/prism-wallet-sdk
 
 ## Table of contents
 
@@ -12,6 +12,7 @@
 
 - [Domain](modules/Domain.md)
 - [PeerDID](modules/PeerDID.md)
+- [Pluto](modules/Pluto.md)
 
 ### Enumerations
 
@@ -36,9 +37,11 @@
 - [OfferCredential](classes/OfferCredential.md)
 - [PeerDID](classes/PeerDID-1.md)
 - [PeerDIDService](classes/PeerDIDService.md)
+- [Pluto](classes/Pluto-1.md)
 - [Pollux](classes/Pollux.md)
 - [PublicMediatorStore](classes/PublicMediatorStore.md)
 - [RequestPresentation](classes/RequestPresentation.md)
+- [Store](classes/Store.md)
 
 ### Interfaces
 
@@ -91,7 +94,7 @@ Re-exports [KeyProperties](enums/Domain.KeyProperties.md)
 
 #### Defined in
 
-[src/prism-agent/protocols/types.ts:87](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/protocols/types.ts#L87)
+[src/prism-agent/protocols/types.ts:87](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/prism-agent/protocols/types.ts#L87)
 
 ___
 
@@ -101,7 +104,7 @@ ___
 
 #### Defined in
 
-[src/prism-agent/protocols/types.ts:73](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/protocols/types.ts#L73)
+[src/prism-agent/protocols/types.ts:73](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/prism-agent/protocols/types.ts#L73)
 
 ## Variables
 
@@ -111,7 +114,7 @@ ___
 
 #### Defined in
 
-[src/pollux/models/AnonCredsVerifiableCredential.ts:17](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/models/AnonCredsVerifiableCredential.ts#L17)
+[src/pollux/models/AnonCredsVerifiableCredential.ts:17](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/models/AnonCredsVerifiableCredential.ts#L17)
 
 ___
 
@@ -121,4 +124,4 @@ ___
 
 #### Defined in
 
-[src/pollux/models/JWTVerifiableCredential.ts:19](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/models/JWTVerifiableCredential.ts#L19)
+[src/pollux/models/JWTVerifiableCredential.ts:20](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/models/JWTVerifiableCredential.ts#L20)

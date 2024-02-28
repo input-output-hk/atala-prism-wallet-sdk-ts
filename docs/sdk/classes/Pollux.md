@@ -1,14 +1,14 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / Pollux
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / Pollux
 
 # Class: Pollux
 
-Implementation of PolluxInterface and responsible of handling credential related tasks
+Implementation of Pollux
 
 **`Export`**
 
 ## Implements
 
-- [`Pollux`](../interfaces/Domain.Pollux.md)
+- [`Pollux`](../interfaces/Domain.Pollux-1.md)
 
 ## Table of contents
 
@@ -28,10 +28,12 @@ Implementation of PolluxInterface and responsible of handling credential related
 
 ### Methods
 
+- [createPresentationProof](Pollux.md#createpresentationproof)
 - [extractAttachment](Pollux.md#extractattachment)
 - [extractCredentialFormatFromMessage](Pollux.md#extractcredentialformatfrommessage)
 - [extractDomainChallenge](Pollux.md#extractdomainchallenge)
 - [fetchCredentialDefinition](Pollux.md#fetchcredentialdefinition)
+- [fetchSchema](Pollux.md#fetchschema)
 - [isAnonCredsBody](Pollux.md#isanoncredsbody)
 - [parseCredential](Pollux.md#parsecredential)
 - [processAnonCredsCredential](Pollux.md#processanoncredscredential)
@@ -57,7 +59,7 @@ Implementation of PolluxInterface and responsible of handling credential related
 
 #### Defined in
 
-[src/pollux/Pollux.ts:31](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/Pollux.ts#L31)
+[src/pollux/Pollux.ts:34](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L34)
 
 ## Properties
 
@@ -67,7 +69,7 @@ Implementation of PolluxInterface and responsible of handling credential related
 
 #### Defined in
 
-[src/pollux/Pollux.ts:29](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/Pollux.ts#L29)
+[src/pollux/Pollux.ts:32](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L32)
 
 ___
 
@@ -77,7 +79,7 @@ ___
 
 #### Defined in
 
-[src/pollux/Pollux.ts:33](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/Pollux.ts#L33)
+[src/pollux/Pollux.ts:36](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L36)
 
 ___
 
@@ -87,7 +89,7 @@ ___
 
 #### Defined in
 
-[src/pollux/Pollux.ts:32](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/Pollux.ts#L32)
+[src/pollux/Pollux.ts:35](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L35)
 
 ## Accessors
 
@@ -101,9 +103,63 @@ ___
 
 #### Defined in
 
-[src/pollux/Pollux.ts:41](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/Pollux.ts#L41)
+[src/pollux/Pollux.ts:44](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L44)
 
 ## Methods
+
+### createPresentationProof
+
+▸ **createPresentationProof**(`presentationRequest`, `credential`, `options`): `Promise`\<[`Presentation`](../interfaces/Domain.Anoncreds.Presentation.md)\>
+
+Process a PresentationRequest with Credential to create a Presentation.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `presentationRequest` | `PresentationRequest`\<`unknown`\> |  |
+| `credential` | [`AnonCredsCredential`](AnonCredsCredential.md) |  |
+| `options` | [`Anoncreds`](../interfaces/Domain.Pollux.createPresentationProof.options.Anoncreds.md) | object containing necessary metadata |
+
+#### Returns
+
+`Promise`\<[`Presentation`](../interfaces/Domain.Anoncreds.Presentation.md)\>
+
+dependent on the CredentialType
+
+**`Throws`**
+
+#### Implementation of
+
+[Pollux](../interfaces/Domain.Pollux-1.md).[createPresentationProof](../interfaces/Domain.Pollux-1.md#createpresentationproof)
+
+#### Defined in
+
+[src/pollux/Pollux.ts:298](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L298)
+
+▸ **createPresentationProof**(`presentationRequest`, `credential`, `options`): `Promise`\<`string`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `presentationRequest` | `PresentationRequest`\<`unknown`\> |
+| `credential` | [`JWTCredential`](JWTCredential.md) |
+| `options` | [`JWT`](../interfaces/Domain.Pollux.createPresentationProof.options.JWT.md) |
+
+#### Returns
+
+`Promise`\<`string`\>
+
+#### Implementation of
+
+[Pollux](../interfaces/Domain.Pollux-1.md).[createPresentationProof](../interfaces/Domain.Pollux-1.md#createpresentationproof)
+
+#### Defined in
+
+[src/pollux/Pollux.ts:299](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L299)
+
+___
 
 ### extractAttachment
 
@@ -122,7 +178,7 @@ ___
 
 #### Defined in
 
-[src/pollux/Pollux.ts:116](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/Pollux.ts#L116)
+[src/pollux/Pollux.ts:144](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L144)
 
 ___
 
@@ -134,7 +190,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `message` | [`Message`](Domain.Message.md) |
+| `message` | [`Message`](Domain.Message-1.md) |
 
 #### Returns
 
@@ -142,11 +198,11 @@ ___
 
 #### Implementation of
 
-[Pollux](../interfaces/Domain.Pollux.md).[extractCredentialFormatFromMessage](../interfaces/Domain.Pollux.md#extractcredentialformatfrommessage)
+[Pollux](../interfaces/Domain.Pollux-1.md).[extractCredentialFormatFromMessage](../interfaces/Domain.Pollux-1.md#extractcredentialformatfrommessage)
 
 #### Defined in
 
-[src/pollux/Pollux.ts:51](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/Pollux.ts#L51)
+[src/pollux/Pollux.ts:53](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L53)
 
 ___
 
@@ -171,13 +227,15 @@ ___
 
 #### Defined in
 
-[src/pollux/Pollux.ts:260](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/Pollux.ts#L260)
+[src/pollux/Pollux.ts:285](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L285)
 
 ___
 
 ### fetchCredentialDefinition
 
 ▸ **fetchCredentialDefinition**(`credentialDefinitionId`): `Promise`\<[`CredentialDefinition`](../interfaces/Domain.Anoncreds.CredentialDefinition.md)\>
+
+handle the retrieval of a Credential Definition
 
 #### Parameters
 
@@ -191,7 +249,29 @@ ___
 
 #### Defined in
 
-[src/pollux/Pollux.ts:103](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/Pollux.ts#L103)
+[src/pollux/Pollux.ts:112](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L112)
+
+___
+
+### fetchSchema
+
+▸ **fetchSchema**(`schemaURI`): `Promise`\<`any`\>
+
+handle the retrieval of a Schema definition
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `schemaURI` | `string` | URI used to retrieve the Schema definition |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[src/pollux/Pollux.ts:132](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L132)
 
 ___
 
@@ -211,7 +291,7 @@ body is CredentialOffer
 
 #### Defined in
 
-[src/pollux/Pollux.ts:129](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/Pollux.ts#L129)
+[src/pollux/Pollux.ts:157](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L157)
 
 ___
 
@@ -235,11 +315,11 @@ ___
 
 #### Implementation of
 
-[Pollux](../interfaces/Domain.Pollux.md).[parseCredential](../interfaces/Domain.Pollux.md#parsecredential)
+[Pollux](../interfaces/Domain.Pollux-1.md).[parseCredential](../interfaces/Domain.Pollux-1.md#parsecredential)
 
 #### Defined in
 
-[src/pollux/Pollux.ts:200](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/Pollux.ts#L200)
+[src/pollux/Pollux.ts:225](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L225)
 
 ___
 
@@ -251,7 +331,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `offer` | [`Message`](Domain.Message.md) |
+| `offer` | [`Message`](Domain.Message-1.md) |
 | `options` | [`CredentialRequestOptions`](../interfaces/Domain.CredentialRequestOptions.md) |
 
 #### Returns
@@ -260,11 +340,11 @@ ___
 
 #### Implementation of
 
-[Pollux](../interfaces/Domain.Pollux.md).[processAnonCredsCredential](../interfaces/Domain.Pollux.md#processanoncredscredential)
+[Pollux](../interfaces/Domain.Pollux-1.md).[processAnonCredsCredential](../interfaces/Domain.Pollux-1.md#processanoncredscredential)
 
 #### Defined in
 
-[src/pollux/Pollux.ts:167](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/Pollux.ts#L167)
+[src/pollux/Pollux.ts:195](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L195)
 
 ___
 
@@ -276,7 +356,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `offer` | [`Message`](Domain.Message.md) |
+| `offer` | [`Message`](Domain.Message-1.md) |
 | `options` | [`CredentialRequestOptions`](../interfaces/Domain.CredentialRequestOptions.md) |
 
 #### Returns
@@ -285,11 +365,11 @@ ___
 
 #### Implementation of
 
-[Pollux](../interfaces/Domain.Pollux.md).[processJWTCredential](../interfaces/Domain.Pollux.md#processjwtcredential)
+[Pollux](../interfaces/Domain.Pollux-1.md).[processJWTCredential](../interfaces/Domain.Pollux-1.md#processjwtcredential)
 
 #### Defined in
 
-[src/pollux/Pollux.ts:71](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/Pollux.ts#L71)
+[src/pollux/Pollux.ts:74](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L74)
 
 ___
 
@@ -303,4 +383,4 @@ ___
 
 #### Defined in
 
-[src/pollux/Pollux.ts:36](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/Pollux.ts#L36)
+[src/pollux/Pollux.ts:39](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/Pollux.ts#L39)

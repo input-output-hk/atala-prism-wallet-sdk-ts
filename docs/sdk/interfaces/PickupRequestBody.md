@@ -1,4 +1,4 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / PickupRequestBody
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / PickupRequestBody
 
 # Interface: PickupRequestBody
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[src/prism-agent/protocols/types.ts:45](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/protocols/types.ts#L45)
+[src/prism-agent/protocols/types.ts:45](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/prism-agent/protocols/types.ts#L45)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[src/prism-agent/protocols/types.ts:44](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/protocols/types.ts#L44)
+[src/prism-agent/protocols/types.ts:44](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/prism-agent/protocols/types.ts#L44)

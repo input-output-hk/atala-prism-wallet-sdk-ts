@@ -1,4 +1,4 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / Castor
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / Castor
 
 # Class: Castor
 
@@ -51,7 +51,7 @@ Creates an instance of Castor as soon as a valid cryptographic interface is prov
 
 #### Defined in
 
-[src/castor/Castor.ts:67](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/castor/Castor.ts#L67)
+[src/castor/Castor.ts:67](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/castor/Castor.ts#L67)
 
 ## Properties
 
@@ -61,7 +61,7 @@ Creates an instance of Castor as soon as a valid cryptographic interface is prov
 
 #### Defined in
 
-[src/castor/Castor.ts:58](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/castor/Castor.ts#L58)
+[src/castor/Castor.ts:58](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/castor/Castor.ts#L58)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/castor/Castor.ts:59](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/castor/Castor.ts#L59)
+[src/castor/Castor.ts:59](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/castor/Castor.ts#L59)
 
 ## Methods
 
@@ -112,7 +112,7 @@ const peerDid = await castor.createPeerDID(
 
 #### Defined in
 
-[src/castor/Castor.ts:195](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/castor/Castor.ts#L195)
+[src/castor/Castor.ts:195](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/castor/Castor.ts#L195)
 
 ___
 
@@ -160,7 +160,7 @@ const prismDid = await castor.createPrismDID(
 
 #### Defined in
 
-[src/castor/Castor.ts:121](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/castor/Castor.ts#L121)
+[src/castor/Castor.ts:121](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/castor/Castor.ts#L121)
 
 ___
 
@@ -182,7 +182,7 @@ Extracts the verificationMethods from an array of CoreProperties inside a DID Do
 
 #### Defined in
 
-[src/castor/Castor.ts:238](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/castor/Castor.ts#L238)
+[src/castor/Castor.ts:238](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/castor/Castor.ts#L238)
 
 ___
 
@@ -209,7 +209,7 @@ Returns ecnumbasis from a valid DID and its related publicKey
 
 #### Defined in
 
-[src/castor/Castor.ts:381](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/castor/Castor.ts#L381)
+[src/castor/Castor.ts:381](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/castor/Castor.ts#L381)
 
 ___
 
@@ -246,7 +246,7 @@ const parsedPrismDid = castor.parseDID(
 
 #### Defined in
 
-[src/castor/Castor.ts:91](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/castor/Castor.ts#L91)
+[src/castor/Castor.ts:91](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/castor/Castor.ts#L91)
 
 ___
 
@@ -284,7 +284,7 @@ const didDocument = await castor.resolveDID("did:prism:123456")
 
 #### Defined in
 
-[src/castor/Castor.ts:220](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/castor/Castor.ts#L220)
+[src/castor/Castor.ts:220](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/castor/Castor.ts#L220)
 
 ___
 
@@ -336,4 +336,4 @@ const isValid = castor.verifySignature(
 
 #### Defined in
 
-[src/castor/Castor.ts:282](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/castor/Castor.ts#L282)
+[src/castor/Castor.ts:282](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/castor/Castor.ts#L282)

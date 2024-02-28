@@ -1,4 +1,4 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / [Domain](Domain.md) / PolluxError
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / [Domain](Domain.md) / PolluxError
 
 # Namespace: PolluxError
 
@@ -10,3 +10,4 @@
 
 - [InvalidCredentialError](../classes/Domain.PolluxError.InvalidCredentialError.md)
 - [InvalidJWTString](../classes/Domain.PolluxError.InvalidJWTString.md)
+- [InvalidPresentationProofArgs](../classes/Domain.PolluxError.InvalidPresentationProofArgs.md)

@@ -1,4 +1,4 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / JWTVerifiableCredentialProperties
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / JWTVerifiableCredentialProperties
 
 # Enumeration: JWTVerifiableCredentialProperties
 
@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[src/pollux/models/JWTVerifiableCredential.ts:15](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/models/JWTVerifiableCredential.ts#L15)
+[src/pollux/models/JWTVerifiableCredential.ts:16](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/models/JWTVerifiableCredential.ts#L16)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[src/pollux/models/JWTVerifiableCredential.ts:14](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/models/JWTVerifiableCredential.ts#L14)
+[src/pollux/models/JWTVerifiableCredential.ts:15](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/models/JWTVerifiableCredential.ts#L15)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[src/pollux/models/JWTVerifiableCredential.ts:9](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/models/JWTVerifiableCredential.ts#L9)
+[src/pollux/models/JWTVerifiableCredential.ts:10](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/models/JWTVerifiableCredential.ts#L10)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/pollux/models/JWTVerifiableCredential.ts:11](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/models/JWTVerifiableCredential.ts#L11)
+[src/pollux/models/JWTVerifiableCredential.ts:12](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/models/JWTVerifiableCredential.ts#L12)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/pollux/models/JWTVerifiableCredential.ts:12](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/models/JWTVerifiableCredential.ts#L12)
+[src/pollux/models/JWTVerifiableCredential.ts:13](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/models/JWTVerifiableCredential.ts#L13)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/pollux/models/JWTVerifiableCredential.ts:13](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/models/JWTVerifiableCredential.ts#L13)
+[src/pollux/models/JWTVerifiableCredential.ts:14](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/models/JWTVerifiableCredential.ts#L14)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/pollux/models/JWTVerifiableCredential.ts:16](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/models/JWTVerifiableCredential.ts#L16)
+[src/pollux/models/JWTVerifiableCredential.ts:17](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/models/JWTVerifiableCredential.ts#L17)
 
 ___
 
@@ -93,4 +93,4 @@ ___
 
 #### Defined in
 
-[src/pollux/models/JWTVerifiableCredential.ts:10](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/pollux/models/JWTVerifiableCredential.ts#L10)
+[src/pollux/models/JWTVerifiableCredential.ts:11](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/pollux/models/JWTVerifiableCredential.ts#L11)

@@ -1,4 +1,4 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / ListenerKey
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / ListenerKey
 
 # Enumeration: ListenerKey
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:90](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L90)
+[src/prism-agent/types/index.ts:90](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/prism-agent/types/index.ts#L90)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[src/prism-agent/types/index.ts:89](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/prism-agent/types/index.ts#L89)
+[src/prism-agent/types/index.ts:89](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/prism-agent/types/index.ts#L89)

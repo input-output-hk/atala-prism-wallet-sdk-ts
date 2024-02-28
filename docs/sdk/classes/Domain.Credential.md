@@ -1,8 +1,11 @@
-[@input-output-hk/atala-prism-wallet-sdk](../README.md) / [Exports](../modules.md) / [Domain](../modules/Domain.md) / Credential
+[@atala/prism-wallet-sdk](../README.md) / [Exports](../modules.md) / [Domain](../modules/Domain.md) / Credential
 
 # Class: Credential
 
 [Domain](../modules/Domain.md).Credential
+
+Storable
+define properties a Domain object must implement to be compatible with Pluto
 
 ## Hierarchy
 
@@ -11,6 +14,10 @@
   ↳ [`AnonCredsCredential`](AnonCredsCredential.md)
 
   ↳ [`JWTCredential`](JWTCredential.md)
+
+## Implements
+
+- [`Storable`](../interfaces/Domain.Pluto.Storable.md)
 
 ## Table of contents
 
@@ -26,6 +33,7 @@
 - [properties](Domain.Credential.md#properties)
 - [recoveryId](Domain.Credential.md#recoveryid)
 - [subject](Domain.Credential.md#subject)
+- [uuid](Domain.Credential.md#uuid)
 
 ### Methods
 
@@ -51,7 +59,7 @@
 
 #### Defined in
 
-[src/domain/models/Credential.ts:16](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/Credential.ts#L16)
+[src/domain/models/Credential.ts:13](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/domain/models/Credential.ts#L13)
 
 ___
 
@@ -61,7 +69,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/Credential.ts:12](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/Credential.ts#L12)
+[src/domain/models/Credential.ts:10](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/domain/models/Credential.ts#L10)
 
 ___
 
@@ -71,7 +79,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/Credential.ts:14](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/Credential.ts#L14)
+[src/domain/models/Credential.ts:11](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/domain/models/Credential.ts#L11)
 
 ___
 
@@ -81,7 +89,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/Credential.ts:17](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/Credential.ts#L17)
+[src/domain/models/Credential.ts:14](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/domain/models/Credential.ts#L14)
 
 ___
 
@@ -91,7 +99,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/Credential.ts:9](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/Credential.ts#L9)
+[src/domain/models/Credential.ts:9](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/domain/models/Credential.ts#L9)
 
 ___
 
@@ -101,7 +109,24 @@ ___
 
 #### Defined in
 
-[src/domain/models/Credential.ts:15](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/Credential.ts#L15)
+[src/domain/models/Credential.ts:12](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/domain/models/Credential.ts#L12)
+
+___
+
+### uuid
+
+• `Readonly` **uuid**: `string`
+
+Universally Unique Identifier.
+should be unique across all items.
+
+#### Implementation of
+
+[Storable](../interfaces/Domain.Pluto.Storable.md).[uuid](../interfaces/Domain.Pluto.Storable.md#uuid)
+
+#### Defined in
+
+[src/domain/models/Credential.ts:16](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/domain/models/Credential.ts#L16)
 
 ## Methods
 
@@ -121,7 +146,7 @@ ___
 
 #### Defined in
 
-[src/domain/models/Credential.ts:19](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/Credential.ts#L19)
+[src/domain/models/Credential.ts:18](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/domain/models/Credential.ts#L18)
 
 ___
 
@@ -135,7 +160,7 @@ this is ProvableCredential
 
 #### Defined in
 
-[src/domain/models/Credential.ts:23](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/Credential.ts#L23)
+[src/domain/models/Credential.ts:22](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/domain/models/Credential.ts#L22)
 
 ___
 
@@ -149,4 +174,4 @@ this is StorableCredential
 
 #### Defined in
 
-[src/domain/models/Credential.ts:27](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/3f28060/src/domain/models/Credential.ts#L27)
+[src/domain/models/Credential.ts:26](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts/blob/eb6a5ab/src/domain/models/Credential.ts#L26)
