@@ -31,6 +31,7 @@ import { RequestPresentation } from "./protocols/proofPresentation/RequestPresen
 import { DIDCommWrapper } from "../mercury/didcomm/Wrapper";
 import { PublicMediatorStore } from "./mediator/PlutoMediatorStore";
 import { BasicMediatorHandler } from "./mediator/BasicMediatorHandler";
+import { ProofTypes } from "./protocols/types";
 
 enum AgentState {
   STOPPED = "stopped",
@@ -65,6 +66,7 @@ export default class Agent
 
   private pollux: Pollux;
 
+
   /**
    * Creates an instance of Agent.
    *
@@ -89,13 +91,25 @@ export default class Agent
     public readonly api: Domain.Api = new ApiImpl()
   ) {
     this.pollux = new Pollux(castor);
+    this.agentDIDHigherFunctions = new AgentDIDHigherFunctions(
+      apollo,
+      castor,
+      pluto,
+      mediationHandler.mediator?.routingDID,
+      mediationHandler,
+      seed
+    );
+
     this.agentCredentials = new AgentCredentials(
       apollo,
       castor,
       pluto,
       this.pollux,
-      seed
+      seed,
+      mercury,
+      this.agentDIDHigherFunctions
     );
+
     this.connectionManager =
       connectionManager ||
       new ConnectionsManager(
@@ -107,16 +121,6 @@ export default class Agent
         []
       );
 
-
-    this.agentDIDHigherFunctions = new AgentDIDHigherFunctions(
-      apollo,
-      castor,
-      pluto,
-      connectionManager,
-      mediationHandler,
-      seed
-    );
-
     this.agentInvitations = new AgentInvitations(
       this.pluto,
       this.api,
@@ -124,6 +128,7 @@ export default class Agent
       this.connectionManager
     );
   }
+
 
   /**
    * Convenience initializer for Agent
@@ -168,8 +173,18 @@ export default class Agent
       castor,
       pluto,
       pollux,
-      seed
-    );
+      seed,
+      mercury,
+      new AgentDIDHigherFunctions(
+        apollo,
+        castor,
+        pluto,
+        handler.mediator?.routingDID,
+        handler,
+        seed
+      )
+    )
+
     const manager = new ConnectionsManager(castor, mercury, pluto, agentCredentials, handler);
 
     const agent = new Agent(
@@ -497,5 +512,19 @@ export default class Agent
       request,
       credential
     );
+  }
+
+
+  async initiatePresentationRequest(type: Domain.CredentialType, toDID: Domain.DID, proofTypes: ProofTypes[]): Promise<RequestPresentation> {
+    const requestPresentation = await this.agentCredentials.initiatePresentationRequest(
+      type,
+      toDID,
+      proofTypes
+    );
+
+    const requestPresentationMessage = requestPresentation.makeMessage()
+    await this.connectionManager.sendMessage(requestPresentationMessage);
+
+    return requestPresentation
   }
 }
