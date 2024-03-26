@@ -10,7 +10,7 @@ import { MediationRequest } from "../protocols/mediation/MediationRequest";
 import { PickupReceived } from "../protocols/pickup/PickupReceived";
 import { PickupRequest } from "../protocols/pickup/PickupRequest";
 import { PickupRunner } from "../protocols/pickup/PickupRunner";
-import { EventCallback, MediatorHandler, MediatorStore } from "../types";
+import { EventPickupCallback, MediatorHandler, MediatorStore } from "../types";
 import { ProtocolType } from '../protocols/ProtocolTypes';
 
 /**
@@ -196,7 +196,7 @@ export class BasicMediatorHandler implements MediatorHandler {
   listenUnreadMessages(
     signal: AbortSignal,
     serviceEndpointUri: string,
-    onMessage: EventCallback
+    onMessage: EventPickupCallback
   ) {
     //Todo: we may want to abstract this to allow users to use their own native implementations for websockets
     //Or potentially be TCP sockets directly, this can be used in electron and nodejs can establish tcp connections directly.
@@ -229,8 +229,7 @@ export class BasicMediatorHandler implements MediatorHandler {
         decryptMessage.piuri === ProtocolType.PickupStatus ||
         decryptMessage.piuri === ProtocolType.PickupDelivery) {
         const delivered = await new PickupRunner(decryptMessage, this.mercury).run()
-        const deliveredMessages = delivered.map(({ message }) => message);
-        onMessage(deliveredMessages)
+        onMessage(delivered)
       }
     })
 

@@ -278,24 +278,7 @@ export class ConnectionsManager implements ConnectionsManagerClass {
         this.mediationHandler.listenUnreadMessages(
           signal,
           hasWebsocket.serviceEndpoint.uri,
-          async (messages) => {
-            const unreadMessages = messages.reduce<{
-              attachmentId: string;
-              message: Message;
-            }[]>((unreads, message) => {
-              const attachment = message.attachments.at(0);
-              if (!attachment) {
-                return unreads;
-              }
-              return [
-                ...unreads,
-                {
-                  message: message,
-                  attachmentId: attachment.id
-                }
-              ];
-            }, []);
-
+          async (unreadMessages) => {
             await this.processMessages(unreadMessages);
           }
         );
