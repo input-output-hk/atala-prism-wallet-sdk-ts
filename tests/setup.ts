@@ -1,5 +1,10 @@
-const cryptoPkgh = require("crypto");
-const util = require('util')
-global.crypto = cryptoPkgh;
-global.TextEncoder = util.TextEncoder;
-global.TextDecoder = util.TextDecoder;
+
+import { Buffer } from 'buffer';
+import crypto from 'crypto';
+import util from 'util';
+if (typeof window !== 'undefined') {
+    window.Buffer = Buffer;
+
+} else {
+    global.Buffer = Buffer;
+}

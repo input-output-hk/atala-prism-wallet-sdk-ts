@@ -1,5 +1,6 @@
+import { describe, it, expect } from 'vitest';
+
 import chai from "chai";
-import { expect } from "chai";
 import chaiAsPromised from "chai-as-promised";
 import { Message } from "../../../../../src/domain";
 import { Mercury } from "../../../../../src/domain/buildingBlocks/Mercury";
