@@ -1,6 +1,5 @@
 // import { Anoncreds } from "../domain/models/Anoncreds";
-import type * as Anoncreds from "anoncreds-browser";
-
+import type * as Anoncreds from "anoncreds-wasm";
 /**
  * @class AnoncredsLoader
  * handle loading and access of anoncreds library
@@ -20,20 +19,12 @@ export class AnoncredsLoader {
   }
 
   private async load() {
-    /*START.BROWSER_ONLY*/
-    if (typeof window !== "undefined" && !this.loaded) {
-      this.pkg = await import("anoncreds-browser");
-      const pkgWasm = await import("anoncreds-browser/anoncreds_wasm_bg.wasm");
-      await (this.pkg as any).default(await (pkgWasm as any).default());
-      this.loaded = true;
-    }
-    /*END.BROWSER_ONLY*/
-    /*START.NODE_ONLY*/
     if (!this.loaded) {
-      this.pkg = await import("anoncreds-node");
+      this.pkg = await import("anoncreds-wasm");
+      const pkgWasm = await import("../../externals/generated/anoncreds-wasm/anoncreds_wasm_bg.wasm");
+      await (this.pkg as any).default(await (await pkgWasm as any).default());
       this.loaded = true;
     }
-    /*END.NODE_ONLY*/
   }
 
   private get wasm() {

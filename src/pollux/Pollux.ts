@@ -1,5 +1,5 @@
 import { uuid } from "@stablelib/uuid";
-import type * as Anoncreds from "anoncreds-browser";
+import type * as Anoncreds from "anoncreds-wasm";
 import * as  jsonld from 'jsonld';
 import { Castor } from "../domain/buildingBlocks/Castor";
 import { CredentialOfferPayloads, CredentialOfferTypes, Pollux as IPollux, ProcessedCredentialOfferPayloads } from "../domain/buildingBlocks/Pollux";
@@ -71,7 +71,7 @@ import { Bitstring } from "./utils/Bitstring";
  */
 export default class Pollux implements IPollux {
   private _anoncreds: AnoncredsLoader | undefined;
-  private _jwe: typeof import("jwe-browser") | undefined;
+  private _jwe: typeof import("jwe-wasm") | undefined;
   private _pako = pako;
 
   constructor(
@@ -841,22 +841,15 @@ export default class Pollux implements IPollux {
 
   async start() {
     this._anoncreds = await AnoncredsLoader.getInstance();
-    /*START.BROWSER_ONLY*/
-    if (typeof window !== "undefined" && !this._jwe) {
-      const DIDCommLib = await import("jwe-browser/jwe_rust.js");
-      const wasmInit = DIDCommLib.default;
-      const { default: wasm } = await import("jwe-browser/jwe_rust_bg.wasm");
+    if (!this._jwe) {
+      this._jwe = await import("jwe-wasm");
+      const pkgWasm = await import("../../externals/generated/jwe-wasm/jwe_rust_bg.wasm");
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      await wasmInit(await wasm());
-      this._jwe = DIDCommLib;
+      await (this.pkg as any).default(await (pkgWasm as any).default());
+
     }
-    /*END.BROWSER_ONLY*/
-    /*START.NODE_ONLY*/
-    if (!this._jwe) {
-      this._jwe = await import("jwe-node");
-    }
-    /*END.NODE_ONLY*/
+
   }
 
   private isOfferPayload<Type extends CredentialType>(offer: any, type: Type): offer is CredentialOfferPayloads[CredentialType.JWT] {
