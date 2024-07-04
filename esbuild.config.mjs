@@ -8,6 +8,9 @@ const wasmPlugin = {
     name: 'wasm',
     setup(build) {
         build.onResolve({ filter: /\.wasm$/ }, args => {
+            if (fs.existsSync(path.resolve("externals/generated", args.path))) {
+                return { path: path.resolve("externals/generated", args.path), namespace: 'wasm' };
+            }
             return { path: path.resolve(args.resolveDir, args.path), namespace: 'wasm' };
         });
         build.onLoad({ filter: /.*/, namespace: 'wasm' }, async (args) => {
@@ -29,6 +32,9 @@ const plugins = [
                 return {
                     external: true,
                 }
+            }
+            if (resolved.includes(".wasm")) {
+                debugger;
             }
             return resolved
         },

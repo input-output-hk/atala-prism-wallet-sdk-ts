@@ -6,6 +6,7 @@ import { CredentialOfferPayloads, CredentialOfferTypes, Pollux as IPollux, Proce
 import { base64, base64url } from "multiformats/bases/base64";
 import { AnoncredsLoader } from "./AnoncredsLoader";
 import * as pako from 'pako';
+import wasmBuffer from "../../externals/generated/jwe-wasm/jwe_rust_bg.wasm"
 
 import {
   CredentialRequestOptions,
@@ -841,15 +842,11 @@ export default class Pollux implements IPollux {
 
   async start() {
     this._anoncreds = await AnoncredsLoader.getInstance();
-    if (!this._jwe) {
-      this._jwe = await import("jwe-wasm");
-      const pkgWasm = await import("../../externals/generated/jwe-wasm/jwe_rust_bg.wasm");
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      await (this.pkg as any).default(await (pkgWasm as any).default());
-
-    }
-
+    this._jwe ??= await import("jwe-wasm").then(async module => {
+      const wasmInstance = module.initSync(wasmBuffer);
+      await module.default(wasmInstance);
+      return module;
+    });
   }
 
   private isOfferPayload<Type extends CredentialType>(offer: any, type: Type): offer is CredentialOfferPayloads[CredentialType.JWT] {

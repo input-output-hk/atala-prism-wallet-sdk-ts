@@ -7,6 +7,7 @@ import type {
   Attachment,
   AttachmentData,
 } from "didcomm-wasm";
+import wasmBuffer from "../../../externals/generated/didcomm-wasm/didcomm_js_bg.wasm"
 
 import * as Domain from "../../domain";
 import { DIDCommDIDResolver } from "./DIDResolver";
@@ -32,19 +33,12 @@ export class DIDCommWrapper implements DIDCommProtocol {
   }
 
   public static async getDIDComm() {
-
-    if (!this.didcomm) {
-      const DIDCommLib = await import("didcomm-wasm");
-      const wasmInit = DIDCommLib.default;
-      const wasm = await import("../../../externals/generated/didcomm-wasm/didcomm_js_bg.wasm");
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      await wasmInit(await wasm());
-      this.didcomm = DIDCommLib;
-    }
-
-
-    return this.didcomm;
+    this.didcomm ??= await import("didcomm-wasm").then(async module => {
+      const wasmInstance = module.initSync(wasmBuffer);
+      await module.default(wasmInstance);
+      return module;
+    });
+    return this.didcomm!;
   }
 
   private doesRequireReturnRoute(type: string) {
