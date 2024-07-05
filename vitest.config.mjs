@@ -1,32 +1,19 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite'
-import fs from 'fs'
+import { getWasmJSContent } from './esbuild.base.mjs';
 
 const isCI = process.env.CI === "true";
 
-function customWasmPlugin() {
+function WasmPlugin() {
     return {
-        name: 'custom-wasm-plugin',
-        resolveId(source, importer) {
-            if (source === "jwe-wasm") {
-                debugger;
-            }
-            if (source.endsWith('.wasm')) {
-                return path.resolve(path.dirname(importer), source);
-            }
-            return null;
-        },
-        load(id) {
-            if (id === "jwe-wasm") {
-                debugger;
-            }
-            if (id.endsWith('.wasm')) {
-                const wasmBinary = fs.readFileSync(id);
-                const base64 = Buffer.from(wasmBinary).toString('base64');
-                return `export default Buffer.from("${base64}", "base64");`;
-            }
-            return null;
-        },
+        name: 'wasm-plugin',
+        resolveId: (source, importer) =>
+            source.endsWith('.wasm') ?
+                path.resolve(path.dirname(importer), source) :
+                null,
+        load: (id) => id.endsWith('.wasm') ?
+            getWasmJSContent(id) :
+            null,
     };
 }
 
@@ -50,7 +37,7 @@ const testConfig = {
 
 export default defineConfig({
     plugins: [
-        customWasmPlugin(),
+        WasmPlugin(),
     ],
     resolve: {
         extensions: ['.ts', '.js', '.wasm'],

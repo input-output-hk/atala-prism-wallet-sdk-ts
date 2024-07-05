@@ -168,7 +168,7 @@ const appSlice = createSlice({
                 isAnswering: true,
                 hasAnswered: false,
                 error: null,
-                safeBody: action.meta.arg.message.safeBody,
+                body: action.meta.arg.message.body,
                 credentialFormat: action.meta.arg.message.credentialFormat
             })
         })

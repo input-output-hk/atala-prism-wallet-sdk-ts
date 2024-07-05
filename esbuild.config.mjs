@@ -3,7 +3,7 @@ import esbuild from 'esbuild';
 import fs from 'fs';
 import path from 'path';
 import { NodeResolvePlugin } from '@esbuild-plugins/node-resolve';
-
+import { getWasmJSContent, bufferShim } from './esbuild.base.mjs';
 
 const wasmPlugin = {
     name: 'wasm',
@@ -14,18 +14,17 @@ const wasmPlugin = {
             }
             return { path: path.resolve(args.resolveDir, args.path), namespace: 'wasm' };
         });
-        build.onLoad({ filter: /.*/, namespace: 'wasm' }, async (args) => {
-            const buffer = await fs.promises.readFile(args.path);
-            const base64 = buffer.toString('base64');
-            return {
-                contents: `export default Buffer.from("${base64}", "base64")`,
+        build.onLoad({ filter: /.*/, namespace: 'wasm' }, (args) => (
+            {
+                contents: getWasmJSContent(args.path),
                 loader: 'js',
-            };
-        });
+            }
+        ));
     },
 };
 
 const plugins = [
+    wasmPlugin,
     NodeResolvePlugin({
         extensions: ['.ts', '.js', '.wasm'],
         onResolved: (resolved) => {
@@ -45,43 +44,34 @@ const generic = {
     entryPoints: ['src/index.ts'],
     sourcemap: false,
     bundle: true,
+    platform: 'neutral',
     splitting: false,
     resolveExtensions: ['.ts', '.js', '.wasm'],
     inject: ['anoncreds-wasm', 'didcomm-wasm', 'jwe-wasm'],
     mainFields: ['module', 'main'],
-}
+    banner: {
+        js: bufferShim,
+    },
+    define: {
+        'global.Buffer': 'Buffer',
+    },
+    external: ['buffer']
+};
 
-// Build ES module
-esbuild.build({
-    ...generic,
-    outfile: "build/index.mjs",
-    platform: 'neutral',
-    target: ['esnext'],
-    format: 'esm',
-    plugins: [
-        wasmPlugin,
-        ...plugins
-    ],
-}).then(() => {
-    esbuild.build({
+(async () => {
+    await esbuild.build({
+        ...generic,
+        outfile: "build/index.mjs",
+        target: ['esnext'],
+        format: 'esm',
+        plugins
+    })
+    await esbuild.build({
         ...generic,
         entryPoints: ['./build/index.mjs'],
         outfile: "build/index.cjs",
-        platform: 'neutral',
         target: ['es6'],
         format: 'cjs',
-        plugins: [
-            wasmPlugin,
-            ...plugins
-        ],
-    }).catch((err) => {
-        console.log(err)
-        process.exit(1)
-    });
-})
-
-    .catch((err) => {
-        console.log(err)
-        process.exit(1)
-    });
-
+        plugins
+    })
+})()
