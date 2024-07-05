@@ -2,6 +2,8 @@
 import { defineConfig } from 'vite'
 import fs from 'fs'
 
+const isCI = process.env.CI === "true";
+
 function customWasmPlugin() {
     return {
         name: 'custom-wasm-plugin',
@@ -21,50 +23,42 @@ function customWasmPlugin() {
             if (id.endsWith('.wasm')) {
                 const wasmBinary = fs.readFileSync(id);
                 const base64 = Buffer.from(wasmBinary).toString('base64');
-                return `export default new Uint8Array(Buffer.from("${base64}", "base64"));`;
+                return `export default Buffer.from("${base64}", "base64");`;
             }
             return null;
         },
     };
 }
 
-const isCI = process.env.CI === "true";
+const testConfig = {
+    setupFiles: ['./tests/setup.ts'],
+    reporters: ['verbose'],
+    coverage: {
+        provider: 'istanbul',
+        reporter: isCI ? ['json-summary'] : ['json-summary', "html"],
+        thresholds: {
+            branches: 100,
+            functions: 100,
+            lines: 100,
+            statements: 100
+        },
+        include: [
+            'src'
+        ],
+    },
+}
 
 export default defineConfig({
-    optimizeDeps: {
-        exclude: [
-            "jwe-wasm",
-            "anoncreds-wasm",
-            "didcomm-wasm"
-        ]
-    },
     plugins: [
         customWasmPlugin(),
     ],
     resolve: {
         extensions: ['.ts', '.js', '.wasm'],
-    },
-    build: {
-        rollupOptions: {
-            mainFields: ['module', 'main'],
-
-        },
+        mainFields: ['module', 'main'],
     },
     test: {
-        setupFiles: ['./tests/setup.ts'],
-        reporters: ['verbose'],
-        coverage: {
-            provider: 'istanbul',
-            reporter: isCI ? ['json-summary'] : ['json-summary', "html"],
-            thresholds: {
-                branches: 100,
-                functions: 100,
-                lines: 100,
-                statements: 100
-            },
-            include: [
-                'src'
-            ],
-        },
-    }
+        ...testConfig,
+        environment: 'jsdom',
+        include: ['tests/**/*.test.ts']
+    },
 })

@@ -1,6 +1,5 @@
 // import { Anoncreds } from "../domain/models/Anoncreds";
 import type * as Anoncreds from "anoncreds-wasm";
-import wasmBuffer from "../../externals/generated/anoncreds-wasm/anoncreds_wasm_bg.wasm"
 
 /**
  * @class AnoncredsLoader
@@ -21,21 +20,27 @@ export class AnoncredsLoader {
   }
 
   private async load() {
-    if (!this.loaded) {
-      this.pkg ??= await import("anoncreds-wasm").then(async module => {
-        const wasmInstance = module.initSync(wasmBuffer);
-        await module.default(wasmInstance);
-        return module;
-      });
-      this.loaded = true;
-    }
+    this.pkg ??= await import("anoncreds-wasm").then(async module => {
+
+      let wasmBuffer: Buffer;
+      if (typeof window !== 'undefined') {
+        const wasmModule = await import("../../externals/generated/anoncreds-wasm/anoncreds_wasm_bg.wasm")
+        wasmBuffer = wasmModule.default as any
+        module.initSync(wasmBuffer);
+
+      } else {
+        const wasmModule = await import("../../externals/generated/anoncreds-wasm/anoncreds_wasm_bg.wasm")
+        wasmBuffer = wasmModule.default as any
+        module.initSync(wasmBuffer);
+      }
+      return module
+    });
   }
 
   private get wasm() {
-    if (this.loaded === false || this.pkg === undefined) {
-      throw new Error();
+    if (this.pkg === undefined) {
+      throw new Error("Load wasm first");
     }
-
     return this.pkg;
   }
 

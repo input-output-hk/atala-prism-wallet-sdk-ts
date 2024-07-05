@@ -1,6 +1,4 @@
-/**
- * @jest-environment node
- */
+import { vi, describe, it, expect, test, beforeEach, afterEach } from 'vitest';
 import chai from "chai";
 import chaiAsPromised from "chai-as-promised";
 import SinonChai from "sinon-chai";
@@ -65,21 +63,24 @@ async function createBasicMediationHandler(
     }
 }
 
-jest.mock('isows', () => ({
-    WebSocket: jest.fn(() => ({
-        addEventListener: jest.fn(),
-        send: jest.fn(),
-        close: jest.fn(),
-    })),
-}));
 
 describe("ConnectionsManager tests", () => {
 
+    beforeEach(() => {
+        vi.mock('isows', () => ({
+            WebSocket: vi.fn(() => ({
+                addEventListener: vi.fn(),
+                send: vi.fn(),
+                close: vi.fn(),
+            })),
+        }));
+    })
+
     afterEach(() => {
-        jest.restoreAllMocks();
+        vi.restoreAllMocks();
     });
 
-    it.only("Should use websockets if the mediator's did endpoint uri contains ws or wss and agent options have the opt in", async () => {
+    it("Should use websockets if the mediator's did endpoint uri contains ws or wss and agent options have the opt in", async () => {
         const services = [
             new Service(
                 "#didcomm-1",
@@ -87,15 +88,8 @@ describe("ConnectionsManager tests", () => {
                 new ServiceEndpoint("ws://localhost:12346")
             )
         ];
-        const ConnectionsManager = jest.requireActual('../../src/edge-agent/connectionsManager/ConnectionsManager').ConnectionsManager;
-        const BasicMediatorHandler = jest.requireActual('../../src/edge-agent/mediator/BasicMediatorHandler').BasicMediatorHandler;
-        jest.mock('isows', () => ({
-            WebSocket: jest.fn(() => ({
-                addEventListener: jest.fn(),
-                send: jest.fn(),
-                close: jest.fn(),
-            })),
-        }));
+        const ConnectionsManager = (await import('../../src/edge-agent/connectionsManager/ConnectionsManager')).ConnectionsManager
+        const BasicMediatorHandler = (await import('../../src/edge-agent/mediator/BasicMediatorHandler')).BasicMediatorHandler;
 
         const { manager, handler } = await createBasicMediationHandler(
             ConnectionsManager,
@@ -107,7 +101,7 @@ describe("ConnectionsManager tests", () => {
                 }
             }
         );
-        const listenUnread = jest.spyOn(handler, 'listenUnreadMessages')
+        const listenUnread = vi.spyOn(handler, 'listenUnreadMessages')
         expect(manager).toHaveProperty('withWebsocketsExperiment', true);
         await manager.startFetchingMessages(1)
         expect(listenUnread).toHaveBeenCalled();
@@ -123,21 +117,15 @@ describe("ConnectionsManager tests", () => {
                 new ServiceEndpoint("ws://localhost:12346")
             )
         ];
-        const ConnectionsManager = jest.requireActual('../../src/edge-agent/connectionsManager/ConnectionsManager').ConnectionsManager;
-        const BasicMediatorHandler = jest.requireMock('../../src/edge-agent/mediator/BasicMediatorHandler').BasicMediatorHandler;
-        jest.mock('isows', () => ({
-            WebSocket: jest.fn(() => ({
-                addEventListener: jest.fn(),
-                send: jest.fn(),
-                close: jest.fn(),
-            })),
-        }));
+        const ConnectionsManager = (await import('../../src/edge-agent/connectionsManager/ConnectionsManager')).ConnectionsManager
+        const BasicMediatorHandler = (await import('../../src/edge-agent/mediator/BasicMediatorHandler')).BasicMediatorHandler;
+
         const { manager, handler } = await createBasicMediationHandler(
             ConnectionsManager,
             BasicMediatorHandler,
             services
         );
-        const listenUnread = jest.spyOn(handler, 'listenUnreadMessages')
+        const listenUnread = vi.spyOn(handler, 'listenUnreadMessages')
         expect(manager).toHaveProperty('withWebsocketsExperiment', false);
 
         await manager.startFetchingMessages(1)
@@ -154,15 +142,8 @@ describe("ConnectionsManager tests", () => {
                 new ServiceEndpoint("ws://localhost:12346")
             )
         ];
-        const ConnectionsManager = jest.requireActual('../../src/edge-agent/connectionsManager/ConnectionsManager').ConnectionsManager;
-        const BasicMediatorHandler = jest.requireMock('../../src/edge-agent/mediator/BasicMediatorHandler').BasicMediatorHandler;
-        jest.mock('isows', () => ({
-            WebSocket: jest.fn(() => ({
-                addEventListener: jest.fn(),
-                send: jest.fn(),
-                close: jest.fn(),
-            })),
-        }));
+        const ConnectionsManager = (await import('../../src/edge-agent/connectionsManager/ConnectionsManager')).ConnectionsManager
+        const BasicMediatorHandler = (await import('../../src/edge-agent/mediator/BasicMediatorHandler')).BasicMediatorHandler;
         const { manager, handler } = await createBasicMediationHandler(
             ConnectionsManager,
             BasicMediatorHandler,
@@ -173,7 +154,7 @@ describe("ConnectionsManager tests", () => {
                 }
             }
         );
-        const listenUnread = jest.spyOn(handler, 'listenUnreadMessages')
+        const listenUnread = vi.spyOn(handler, 'listenUnreadMessages')
         expect(manager).toHaveProperty('withWebsocketsExperiment', false);
 
         await manager.startFetchingMessages(1)
@@ -190,15 +171,8 @@ describe("ConnectionsManager tests", () => {
                 new ServiceEndpoint("ws://localhost:12346")
             )
         ];
-        const ConnectionsManager = jest.requireActual('../../src/edge-agent/connectionsManager/ConnectionsManager').ConnectionsManager;
-        const BasicMediatorHandler = jest.requireMock('../../src/edge-agent/mediator/BasicMediatorHandler').BasicMediatorHandler;
-        jest.mock('isows', () => ({
-            WebSocket: jest.fn(() => ({
-                addEventListener: jest.fn(),
-                send: jest.fn(),
-                close: jest.fn(),
-            })),
-        }));
+        const ConnectionsManager = (await import('../../src/edge-agent/connectionsManager/ConnectionsManager')).ConnectionsManager
+        const BasicMediatorHandler = (await import('../../src/edge-agent/mediator/BasicMediatorHandler')).BasicMediatorHandler;
         const { manager, handler } = await createBasicMediationHandler(
             ConnectionsManager,
             BasicMediatorHandler,
@@ -209,7 +183,7 @@ describe("ConnectionsManager tests", () => {
                 }
             }
         );
-        const listenUnread = jest.spyOn(handler, 'listenUnreadMessages')
+        const listenUnread = vi.spyOn(handler, 'listenUnreadMessages')
         expect(manager).toHaveProperty('withWebsocketsExperiment', false);
 
         await manager.startFetchingMessages(1)
@@ -226,15 +200,8 @@ describe("ConnectionsManager tests", () => {
                 new ServiceEndpoint("http://localhost:12346")
             )
         ];
-        const ConnectionsManager = jest.requireActual('../../src/edge-agent/connectionsManager/ConnectionsManager').ConnectionsManager;
-        const BasicMediatorHandler = jest.requireMock('../../src/edge-agent/mediator/BasicMediatorHandler').BasicMediatorHandler;
-        jest.mock('isows', () => ({
-            WebSocket: jest.fn(() => ({
-                addEventListener: jest.fn(),
-                send: jest.fn(),
-                close: jest.fn(),
-            })),
-        }));
+        const ConnectionsManager = (await import('../../src/edge-agent/connectionsManager/ConnectionsManager')).ConnectionsManager
+        const BasicMediatorHandler = (await import('../../src/edge-agent/mediator/BasicMediatorHandler')).BasicMediatorHandler;
         const { manager, handler } = await createBasicMediationHandler(
             ConnectionsManager,
             BasicMediatorHandler,
@@ -245,7 +212,7 @@ describe("ConnectionsManager tests", () => {
                 }
             }
         );
-        const listenUnread = jest.spyOn(handler, 'listenUnreadMessages')
+        const listenUnread = vi.spyOn(handler, 'listenUnreadMessages')
         expect(manager).toHaveProperty('withWebsocketsExperiment', true);
 
         await manager.startFetchingMessages(1)

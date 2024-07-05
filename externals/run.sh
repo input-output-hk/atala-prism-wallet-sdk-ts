@@ -41,12 +41,10 @@ buildDIDComm() {
 
   cd "${GenDIDComm}-wasm"
   if is_mac; then
-        sed -i '' 's/"module": "didcomm_js.js",/"main": "didcomm_js.js",/' package.json
-
+    # sed -i '' 's/"module": "didcomm_js.js",/"main": "didcomm_js.js",/' package.json
     sed -i '' "/if (typeof input === 'undefined') {/,/}/d" didcomm_js.js
   else
-    sed -i  's/"module": "didcomm_js.js",/"main": "didcomm_js.js",/' package.json
-
+        # sed -i  's/"module": "didcomm_js.js",/"main": "didcomm_js.js",/' package.json
     sed -i "/if (typeof input === 'undefined') {/,/}/d" didcomm_js.js
   fi
 
@@ -69,10 +67,10 @@ buildJWT() {
   #The code will fully work
   cd "${GenJWERust}-wasm"
   if is_mac; then
-    sed -i '' 's/"module": "jwe_rust.js",/"main": "jwe_rust.js",/' package.json
+        # sed -i '' 's/"module": "jwe_rust.js",/"main": "jwe_rust.js",/' package.json
     sed -i '' "/if (typeof input === 'undefined') {/,/}/d" jwe_rust.js
   else
-    sed -i 's/"module": "jwe_rust.js",/"main": "jwe_rust.js",/' package.json
+        # sed -i 's/"module": "jwe_rust.js",/"main": "jwe_rust.js",/' package.json
     sed -i "/if (typeof input === 'undefined') {/,/}/d" jwe_rust.js
   fi
 
@@ -95,10 +93,10 @@ buildAnonCreds() {
   #The code will fully work
   cd "${GenAnonCreds}-wasm"
   if is_mac; then
-    sed -i '' 's/"module": "anoncreds_wasm.js",/"main": "anoncreds_wasm.js",/' package.json
+        # sed -i '' 's/"module": "anoncreds_wasm.js",/"main": "anoncreds_wasm.js",/' package.json
     sed -i '' "/if (typeof input === 'undefined') {/,/}/d" "./${AnonCreds}_wasm.js"
   else
-      sed -i 's/"module": "anoncreds_wasm.js",/"main": "anoncreds_wasm.js",/' package.json
+        #   sed -i 's/"module": "anoncreds_wasm.js",/"main": "anoncreds_wasm.js",/' package.json
 
     sed -i "/if (typeof input === 'undefined') {/,/}/d" "./${AnonCreds}_wasm.js"
   fi

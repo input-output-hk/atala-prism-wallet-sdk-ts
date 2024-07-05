@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { NodeResolvePlugin } from '@esbuild-plugins/node-resolve';
 
+
 const wasmPlugin = {
     name: 'wasm',
     setup(build) {
@@ -33,9 +34,6 @@ const plugins = [
                     external: true,
                 }
             }
-            if (resolved.includes(".wasm")) {
-                debugger;
-            }
             return resolved
         },
     }),
@@ -46,6 +44,8 @@ const generic = {
     assetNames: "[name]",
     entryPoints: ['src/index.ts'],
     sourcemap: false,
+    bundle: true,
+    splitting: false,
     resolveExtensions: ['.ts', '.js', '.wasm'],
     inject: ['anoncreds-wasm', 'didcomm-wasm', 'jwe-wasm'],
     mainFields: ['module', 'main'],
@@ -55,10 +55,8 @@ const generic = {
 esbuild.build({
     ...generic,
     outfile: "build/index.mjs",
-    splitting: false,
     platform: 'neutral',
     target: ['esnext'],
-    bundle: true,
     format: 'esm',
     plugins: [
         wasmPlugin,
@@ -69,11 +67,8 @@ esbuild.build({
         ...generic,
         entryPoints: ['./build/index.mjs'],
         outfile: "build/index.cjs",
-
-        splitting: false,
         platform: 'neutral',
         target: ['es6'],
-        bundle: true,
         format: 'cjs',
         plugins: [
             wasmPlugin,

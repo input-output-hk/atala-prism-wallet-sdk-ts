@@ -6,7 +6,7 @@ import { CredentialOfferPayloads, CredentialOfferTypes, Pollux as IPollux, Proce
 import { base64, base64url } from "multiformats/bases/base64";
 import { AnoncredsLoader } from "./AnoncredsLoader";
 import * as pako from 'pako';
-import wasmBuffer from "../../externals/generated/jwe-wasm/jwe_rust_bg.wasm"
+import wasmBuffer from "jwe-wasm/jwe_rust_bg.wasm"
 
 import {
   CredentialRequestOptions,
