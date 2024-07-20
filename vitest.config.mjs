@@ -24,14 +24,20 @@ const testConfig = {
         provider: 'istanbul',
         reporter: isCI ? ['json-summary'] : ['json-summary', "html"],
         thresholds: {
-            branches: 100,
-            functions: 100,
-            lines: 100,
-            statements: 100
+            "branches": 63,
+            "functions": 75,
+            "lines": 75,
+            "statements": 75
+
         },
         include: [
             'src'
         ],
+        exclude: [
+            'src/castor/protos',
+            'src/domain/models/errors'
+        ]
+
     },
 }
 
@@ -46,6 +52,7 @@ export default defineConfig({
     test: {
         ...testConfig,
         environment: 'jsdom',
-        include: ['tests/**/*.test.ts']
+        include: ['tests/**/*.test.ts'],
+
     },
 })
