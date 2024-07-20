@@ -1,11 +1,12 @@
 import { uuid } from "@stablelib/uuid";
-import type * as Anoncreds from "anoncreds-browser";
+import type * as Anoncreds from "anoncreds-wasm";
 import * as  jsonld from 'jsonld';
 import { Castor } from "../domain/buildingBlocks/Castor";
 import { CredentialOfferPayloads, CredentialOfferTypes, Pollux as IPollux, ProcessedCredentialOfferPayloads } from "../domain/buildingBlocks/Pollux";
 import { base64, base64url } from "multiformats/bases/base64";
 import { AnoncredsLoader } from "./AnoncredsLoader";
 import * as pako from 'pako';
+import wasmBuffer from "jwe-wasm/jwe_rust_bg.wasm"
 
 import {
   CredentialRequestOptions,
@@ -49,7 +50,7 @@ import {
 import { AnonCredsCredential } from "./models/AnonCredsVerifiableCredential";
 import { JWTCredential } from "./models/JWTVerifiableCredential";
 import { ApiImpl } from "../edge-agent/helpers/ApiImpl";
-import { JWTJson, PresentationRequest, SDJWTJson } from "./models/PresentationRequest";
+import { PresentationRequest, SDJWTJson } from "./models/PresentationRequest";
 import { DescriptorPath } from "./utils/DescriptorPath";
 import { JWT as JWTClass } from "./utils/JWT";
 import { InvalidVerifyCredentialError, InvalidVerifyFormatError } from "../domain/models/errors/Pollux";
@@ -71,7 +72,7 @@ import { Bitstring } from "./utils/Bitstring";
  */
 export default class Pollux implements IPollux {
   private _anoncreds: AnoncredsLoader | undefined;
-  private _jwe: typeof import("jwe-browser") | undefined;
+  private _jwe: typeof import("jwe-wasm") | undefined;
   private _pako = pako;
 
   constructor(
@@ -841,22 +842,11 @@ export default class Pollux implements IPollux {
 
   async start() {
     this._anoncreds = await AnoncredsLoader.getInstance();
-    /*START.BROWSER_ONLY*/
-    if (typeof window !== "undefined" && !this._jwe) {
-      const DIDCommLib = await import("jwe-browser/jwe_rust.js");
-      const wasmInit = DIDCommLib.default;
-      const { default: wasm } = await import("jwe-browser/jwe_rust_bg.wasm");
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      await wasmInit(await wasm());
-      this._jwe = DIDCommLib;
-    }
-    /*END.BROWSER_ONLY*/
-    /*START.NODE_ONLY*/
-    if (!this._jwe) {
-      this._jwe = await import("jwe-node");
-    }
-    /*END.NODE_ONLY*/
+    this._jwe ??= await import("jwe-wasm").then(async module => {
+      const wasmInstance = module.initSync(wasmBuffer);
+      await module.default(wasmInstance);
+      return module;
+    });
   }
 
   private isOfferPayload<Type extends CredentialType>(offer: any, type: Type): offer is CredentialOfferPayloads[CredentialType.JWT] {
@@ -1106,9 +1096,8 @@ export default class Pollux implements IPollux {
       && "did" in options
       && "privateKey" in options
     ) {
-      //For some reason I can't find out rollup is unable to understand the type is correct
       const jwtPresentationRequest = presentationRequest
-      const presReqJson: JWTJson = jwtPresentationRequest.toJSON() as any;
+      const presReqJson = jwtPresentationRequest.toJSON();
       const presReqOptions = presReqJson.options;
       const signedJWT = await this.JWT.sign({
         issuerDID: options.did,

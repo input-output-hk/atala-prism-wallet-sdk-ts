@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import SDK from "@atala/prism-wallet-sdk";
+import SDK from "@hyperledger/identus-edge-agent-sdk";
 import { v4 as uuidv4 } from "uuid";
 import { DBPreload, Message, Credential } from "@/actions/types";
 import { acceptCredentialOffer, acceptPresentationRequest, connectDatabase, initAgent, rejectCredentialOffer, sendMessage, startAgent, stopAgent } from "../actions";
@@ -168,7 +168,7 @@ const appSlice = createSlice({
                 isAnswering: true,
                 hasAnswered: false,
                 error: null,
-                safeBody: action.meta.arg.message.safeBody,
+                body: action.meta.arg.message.body,
                 credentialFormat: action.meta.arg.message.credentialFormat
             })
         })
