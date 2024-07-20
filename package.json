@@ -51,6 +51,11 @@
     "url": "https://github.com/hyperledger/identus-edge-agent-sdk-ts.git"
   },
   "license": "Apache-2.0",
+  "peerDependenciesMeta": {
+    "@rollup/rollup-linux-x64-gnu": {
+      "optional": true
+    }
+  },
   "keywords": [],
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -165,9 +170,6 @@
     "uuid": "^9.0.0"
   },
   "overrides": {
-    "ws": "^8.17.1",
-    "vite": {
-      "rollup": "npm:@rollup/wasm-node"
-    }
+    "ws": "^8.17.1"
   }
 }

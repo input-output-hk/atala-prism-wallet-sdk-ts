@@ -1096,9 +1096,8 @@ export default class Pollux implements IPollux {
       && "did" in options
       && "privateKey" in options
     ) {
-      //For some reason I can't find out rollup is unable to understand the type is correct
       const jwtPresentationRequest = presentationRequest
-      const presReqJson: JWTJson = jwtPresentationRequest.toJSON() as any;
+      const presReqJson = jwtPresentationRequest.toJSON();
       const presReqOptions = presReqJson.options;
       const signedJWT = await this.JWT.sign({
         issuerDID: options.did,
