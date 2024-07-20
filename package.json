@@ -51,11 +51,6 @@
     "url": "https://github.com/hyperledger/identus-edge-agent-sdk-ts.git"
   },
   "license": "Apache-2.0",
-  "peerDependenciesMeta": {
-    "react-native-sqlite-storage": {
-      "optional": true
-    }
-  },
   "keywords": [],
   "devDependencies": {
     "@babel/core": "^7.20.12",
